@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ChiptuneIntroClipped.ogg-41e208f06756d117122ad497f071a173.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/ChiptuneIntroClipped.ogg"
+dest_files=[ "res://.import/ChiptuneIntroClipped.ogg-41e208f06756d117122ad497f071a173.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,5 +1,6 @@
 # Final Project: LABS: The Platform Experiment
 A basic 2D platformer game by Andrew Stafford.
+Continued from a previous project: [P2-SciFi-Platformer](https://github.com/bsu-cs315/P2-SciFi-Platformer)
 
 ### How to Play:
 - Left/Right to move player left or right

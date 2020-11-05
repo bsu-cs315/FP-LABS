@@ -26,6 +26,7 @@ var seconds := 0
 var minutes := 0
 
 var main_scene_path = "res://src/TitleScreen.tscn"
+var level2_scene_path = "res://src/Level-2.tscn"
 
 
 func _ready():
@@ -88,6 +89,10 @@ func _on_TrapsArea_body_shape_entered(body_id, _body, _body_shape, _area_shape):
 func _on_WinArea_body_shape_entered(body_id, _body, _body_shape, _area_shape):
 	if body_id == player.get_instance_id():
 		win_player()
+
+
+func _on_NextLevelButton_pressed():
+	var _ignored = get_tree().change_scene(level2_scene_path)
 
 
 func _on_RetryButton_pressed():

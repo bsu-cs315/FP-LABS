@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=2]
+[gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://assets/Tiles/BGTile (6).png" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/Tile (5).png" type="Texture" id=2]
@@ -895,6 +895,10 @@ font_data = ExtResource( 16 )
 size = 20
 font_data = ExtResource( 16 )
 
+[sub_resource type="DynamicFont" id=35]
+size = 20
+font_data = ExtResource( 16 )
+
 [sub_resource type="DynamicFont" id=31]
 size = 50
 font_data = ExtResource( 16 )
@@ -1068,12 +1072,12 @@ margin_right = 353.0
 margin_bottom = 102.0
 alignment = 1
 
-[node name="ReplayButton" type="Button" parent="GameOverWinHUD/VBoxContainer/HBoxContainer"]
+[node name="NextLevelButton" type="Button" parent="GameOverWinHUD/VBoxContainer/HBoxContainer"]
 margin_left = 12.0
 margin_right = 183.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 29 )
-text = "Play Again"
+custom_fonts/font = SubResource( 35 )
+text = "Next Level"
 
 [node name="MainMenuButton" type="Button" parent="GameOverWinHUD/VBoxContainer/HBoxContainer"]
 margin_left = 187.0
@@ -1149,6 +1153,6 @@ stream = ExtResource( 12 )
 [connection signal="timeout" from="TimeHUD/MinutesTimer" to="." method="_on_MinutesTimer_timeout"]
 [connection signal="pressed" from="GameOverLoseHUD/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_RetryButton_pressed"]
 [connection signal="pressed" from="GameOverLoseHUD/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
-[connection signal="pressed" from="GameOverWinHUD/VBoxContainer/HBoxContainer/ReplayButton" to="." method="_on_RetryButton_pressed"]
+[connection signal="pressed" from="GameOverWinHUD/VBoxContainer/HBoxContainer/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 [connection signal="pressed" from="GameOverWinHUD/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 [connection signal="pressed" from="PausePopup/Unpause" to="." method="_on_Unpause_pressed"]

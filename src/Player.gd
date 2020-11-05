@@ -11,6 +11,8 @@ var run_speed := 200
 var _velocity := Vector2()
 var shake_intensity := 0.0
 var is_airborne := false
+var double_jump_enabled := false
+var jump_count := 0
 
 onready var player_sprite = $AnimatedSprite
 onready var player_cam = $PlayerCam
@@ -50,9 +52,16 @@ func _physics_process(delta):
 	
 	check_landing()
 	
-	if is_on_floor() and Input.is_action_just_pressed("jump"):
+	if !double_jump_enabled and is_on_floor() and Input.is_action_just_pressed("jump"):
 		_velocity.y = -JUMP_SPEED
 		jump_player.play()
+	if double_jump_enabled and Input.is_action_just_pressed("jump"):
+		if is_on_floor():
+			jump_count = 0
+		if jump_count < 2:
+			jump_count+=1
+			_velocity.y = -JUMP_SPEED
+			jump_player.play()
 	
 	_velocity = move_and_slide(_velocity, Vector2.UP)
 
@@ -87,3 +96,7 @@ func _on_PlayerArea_body_shape_entered(_body_id, body, _body_shape, _area_shape)
 
 func _on_ShakeTime_timeout():
 	shake_intensity = 0
+
+
+func enable_double_jump():
+	double_jump_enabled = true

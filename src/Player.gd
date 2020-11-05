@@ -4,7 +4,7 @@ extends KinematicBody2D
 signal player_hit(body)
 
 const GRAVITY = 900.0
-const JUMP_SPEED = 550
+const JUMP_SPEED = 520
 const BEGINNING_CAMERA_OFFSET = 0.84
 
 var run_speed := 200

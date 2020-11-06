@@ -29,7 +29,7 @@ var main_scene_path = "res://src/TitleScreen.tscn"
 
 
 func _ready():
-	player.enable_double_jump()
+	player.enable_level_2()
 	instructions_popup.popup()
 
 

@@ -895,22 +895,22 @@ font_data = ExtResource( 16 )
 size = 20
 font_data = ExtResource( 16 )
 
-[sub_resource type="DynamicFont" id=35]
-size = 20
-font_data = ExtResource( 16 )
-
 [sub_resource type="DynamicFont" id=31]
-size = 50
+size = 20
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=32]
+size = 50
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=33]
 size = 20
 font_data = ExtResource( 16 )
 
-[sub_resource type="StyleBoxFlat" id=33]
+[sub_resource type="StyleBoxFlat" id=34]
 bg_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
 
-[sub_resource type="DynamicFont" id=34]
+[sub_resource type="DynamicFont" id=35]
 font_data = ExtResource( 16 )
 
 [node name="Level-1" type="Node2D"]
@@ -1076,7 +1076,7 @@ alignment = 1
 margin_left = 12.0
 margin_right = 183.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 35 )
+custom_fonts/font = SubResource( 31 )
 text = "Next Level"
 
 [node name="MainMenuButton" type="Button" parent="GameOverWinHUD/VBoxContainer/HBoxContainer"]
@@ -1100,7 +1100,7 @@ __meta__ = {
 [node name="PauseLabel" type="Label" parent="PausePopup"]
 margin_right = 437.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 32 )
 text = "Game Paused"
 
 [node name="Unpause" type="Button" parent="PausePopup"]
@@ -1108,7 +1108,7 @@ margin_left = 170.0
 margin_top = 100.0
 margin_right = 284.0
 margin_bottom = 133.0
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 33 )
 text = "RESUME"
 
 [node name="InstructionsPopup" type="Popup" parent="."]
@@ -1123,8 +1123,8 @@ margin_left = -46.7194
 margin_top = -14.6833
 margin_right = 297.281
 margin_bottom = 132.317
-custom_styles/normal = SubResource( 33 )
-custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 text = "Instructions:
 Left/Right to move player
 Up to jump!

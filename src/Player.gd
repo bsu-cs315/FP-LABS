@@ -98,5 +98,9 @@ func _on_ShakeTime_timeout():
 	shake_intensity = 0
 
 
-func enable_double_jump():
+func enable_level_2():
 	double_jump_enabled = true
+	player_cam.limit_top = -320
+	player_cam.limit_bottom = 600
+	player_cam.drag_margin_top = 0.5
+	player_cam.drag_margin_v_enabled = true

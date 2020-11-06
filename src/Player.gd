@@ -56,12 +56,12 @@ func _physics_process(delta):
 		_velocity.y = -JUMP_SPEED
 		jump_player.play()
 	if double_jump_enabled and Input.is_action_just_pressed("jump"):
-		if is_on_floor():
-			jump_count = 0
-		if jump_count < 2:
+		if jump_count < 1:
 			jump_count+=1
 			_velocity.y = -JUMP_SPEED
 			jump_player.play()
+	if is_on_floor():
+		jump_count = 0
 	
 	_velocity = move_and_slide(_velocity, Vector2.UP)
 

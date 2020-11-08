@@ -362,10 +362,10 @@ points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
 [sub_resource type="ConvexPolygonShape2D" id=18]
 points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
 
-[sub_resource type="ConvexPolygonShape2D" id=36]
+[sub_resource type="ConvexPolygonShape2D" id=19]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 32, 0, 32 )
 
-[sub_resource type="TileSet" id=19]
+[sub_resource type="TileSet" id=20]
 9/name = "Fence (1).png 9"
 9/texture = ExtResource( 27 )
 9/tex_offset = Vector2( 0, 0 )
@@ -775,25 +775,25 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 32, 0, 32 )
 32/navigation_offset = Vector2( 0, 0 )
 32/shape_offset = Vector2( 0, 0 )
 32/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-32/shape = SubResource( 36 )
+32/shape = SubResource( 19 )
 32/shape_one_way = true
 32/shape_one_way_margin = 1.0
 32/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": true,
 "one_way_margin": 1.0,
-"shape": SubResource( 36 ),
+"shape": SubResource( 19 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 32/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=20]
+[sub_resource type="ConvexPolygonShape2D" id=21]
 points = PoolVector2Array( 29, 0, 54, 11, 61, 31, 55, 51, 36, 63, 8, 53, 0, 31, 9, 11 )
 
-[sub_resource type="ConvexPolygonShape2D" id=21]
+[sub_resource type="ConvexPolygonShape2D" id=22]
 points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
 
-[sub_resource type="TileSet" id=22]
+[sub_resource type="TileSet" id=23]
 1/name = "Saw.png 1"
 1/texture = ExtResource( 7 )
 1/tex_offset = Vector2( 0, 0 )
@@ -804,14 +804,14 @@ points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 20 )
+1/shape = SubResource( 21 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 20 ),
+"shape": SubResource( 21 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
@@ -853,28 +853,28 @@ points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 0, 0 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 21 )
+4/shape = SubResource( 22 )
 4/shape_one_way = false
 4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 21 ),
+"shape": SubResource( 22 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=23]
+[sub_resource type="RectangleShape2D" id=24]
 extents = Vector2( 98.6408, 27.3295 )
 
-[sub_resource type="RectangleShape2D" id=24]
+[sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 555.156, 58.6305 )
 
-[sub_resource type="RectangleShape2D" id=25]
+[sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 48.075, 58.8565 )
 
-[sub_resource type="TileSet" id=26]
+[sub_resource type="TileSet" id=27]
 0/name = "Tile (5).png 0"
 0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
@@ -904,16 +904,12 @@ extents = Vector2( 48.075, 58.8565 )
 1/shapes = [  ]
 1/z_index = 0
 
-[sub_resource type="DynamicFont" id=27]
+[sub_resource type="DynamicFont" id=28]
 size = 30
 font_data = ExtResource( 16 )
 
-[sub_resource type="DynamicFont" id=28]
-size = 50
-font_data = ExtResource( 16 )
-
 [sub_resource type="DynamicFont" id=29]
-size = 20
+size = 50
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=30]
@@ -925,17 +921,21 @@ size = 20
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=32]
-size = 50
-font_data = ExtResource( 16 )
-
-[sub_resource type="DynamicFont" id=33]
 size = 20
 font_data = ExtResource( 16 )
 
-[sub_resource type="StyleBoxFlat" id=34]
+[sub_resource type="DynamicFont" id=33]
+size = 50
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=34]
+size = 20
+font_data = ExtResource( 16 )
+
+[sub_resource type="StyleBoxFlat" id=35]
 bg_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
 
-[sub_resource type="DynamicFont" id=35]
+[sub_resource type="DynamicFont" id=36]
 font_data = ExtResource( 16 )
 
 [node name="Level-1" type="Node2D"]
@@ -958,7 +958,7 @@ texture = ExtResource( 9 )
 centered = false
 
 [node name="Floor" type="TileMap" parent="."]
-tile_set = SubResource( 19 )
+tile_set = SubResource( 20 )
 format = 1
 tile_data = PoolIntArray( -1, 17, 0, -65536, 17, 0, -65535, 17, 0, -65534, 17, 0, -65533, 17, 0, -65532, 17, 0, -65531, 17, 0, -65530, 17, 0, -65529, 17, 0, -65528, 17, 0, -65527, 17, 0, -65526, 17, 0, -65525, 17, 0, -65524, 17, 0, -65523, 17, 0, -65522, 17, 0, -65521, 17, 0, -65520, 17, 0, -65519, 17, 0, -65518, 17, 0, -65517, 17, 0, -65516, 17, 0, -65515, 17, 0, -65514, 17, 0, -65513, 17, 0, -65512, 17, 0, -65511, 17, 0, -65510, 17, 0, -65509, 17, 0, -65508, 17, 0, -65507, 17, 0, -65506, 17, 0, -65505, 17, 0, -65504, 17, 0, -65503, 17, 0, -65502, 17, 0, -65501, 17, 0, -65500, 17, 0, -65499, 17, 0, -65498, 17, 0, -65497, 17, 0, -65496, 17, 0, -65495, 17, 0, -65494, 17, 0, -65493, 17, 0, -65492, 17, 0, 65519, 17, 0, 65520, 17, 0, 65521, 17, 0, 65522, 17, 0, 65523, 17, 0, 65524, 17, 0, 65525, 17, 0, 65526, 17, 0, 65527, 17, 0, 65528, 17, 0, 65529, 17, 0, 65530, 17, 0, 65531, 17, 0, 65532, 17, 0, 65533, 17, 0, 65534, 17, 0, 65535, 18, 0, 44, 17, 0, 45, 17, 0, 46, 17, 0, 47, 17, 0, 131055, 17, 0, 131065, 17, 0, 131066, 17, 0, 131067, 17, 0, 131068, 17, 0, 131069, 17, 0, 131070, 17, 0, 131071, 18, 0, 65580, 17, 0, 65581, 17, 0, 65582, 17, 0, 65583, 17, 0, 196591, 17, 0, 196601, 17, 0, 196602, 17, 0, 196603, 17, 0, 196604, 17, 0, 196605, 17, 0, 196606, 17, 0, 196607, 18, 0, 131096, 24, 0, 131097, 25, 0, 131098, 25, 0, 131099, 26, 0, 131100, 32, 0, 131116, 17, 0, 131117, 17, 0, 131118, 17, 0, 131119, 17, 0, 262127, 17, 0, 196622, 27, 0, 196625, 27, 0, 196628, 27, 0, 196630, 27, 0, 196639, 24, 0, 196640, 26, 0, 196652, 17, 0, 196653, 17, 0, 196654, 17, 0, 196655, 17, 0, 327663, 17, 0, 262153, 13, 0, 262154, 28, 0, 262155, 15, 0, 262186, 9, 0, 262187, 10, 0, 262188, 17, 0, 262189, 17, 0, 262190, 17, 0, 262191, 17, 0, 393199, 17, 0, 393209, 17, 0, 393210, 17, 0, 393211, 17, 0, 393212, 17, 0, 393213, 17, 0, 393214, 17, 0, 393215, 18, 0, 327685, 24, 0, 327686, 25, 0, 327687, 26, 0, 327689, 16, 0, 327690, 17, 0, 327691, 18, 0, 327705, 24, 0, 327706, 25, 0, 327707, 25, 0, 327708, 26, 0, 327712, 31, 0, 327713, 30, 0, 327721, 13, 0, 327722, 28, 0, 327723, 28, 0, 327724, 19, 0, 327725, 17, 0, 327726, 17, 0, 327727, 17, 0, 458735, 17, 0, 458744, 24, 0, 458745, 17, 0, 458746, 17, 0, 458747, 17, 0, 458748, 17, 0, 458749, 17, 0, 458750, 17, 0, 458751, 17, 0, 393216, 10, 0, 393217, 10, 0, 393218, 11, 0, 393225, 16, 0, 393226, 17, 0, 393227, 18, 0, 393238, 27, 0, 393246, 27, 0, 393252, 13, 0, 393253, 28, 0, 393254, 28, 0, 393255, 28, 0, 393256, 28, 0, 393257, 19, 0, 393258, 17, 0, 393259, 17, 0, 393260, 17, 0, 393261, 17, 0, 393262, 17, 0, 393263, 17, 0, 524271, 17, 0, 524279, 24, 0, 524280, 25, 0, 524281, 17, 0, 524282, 17, 0, 524283, 17, 0, 524284, 17, 0, 524285, 17, 0, 524286, 17, 0, 524287, 20, 0, 458752, 28, 0, 458753, 28, 0, 458754, 28, 0, 458755, 28, 0, 458756, 28, 0, 458760, 28, 0, 458761, 19, 0, 458762, 17, 0, 458763, 20, 0, 458764, 28, 0, 458765, 28, 0, 458766, 28, 0, 458767, 28, 0, 458768, 28, 0, 458769, 28, 0, 458770, 15, 0, 458788, 16, 0, 458789, 17, 0, 458790, 17, 0, 458791, 17, 0, 458792, 17, 0, 458793, 17, 0, 458794, 17, 0, 458795, 17, 0, 458796, 17, 0, 458797, 17, 0, 458798, 17, 0, 458799, 17, 0, 589807, 22, 0, 589808, 25, 0, 589809, 25, 0, 589810, 25, 0, 589811, 25, 0, 589812, 25, 0, 589813, 25, 0, 589814, 25, 0, 589815, 25, 0, 589816, 25, 0, 589817, 22, 0, 589818, 17, 0, 589819, 17, 0, 589820, 17, 0, 589821, 17, 0, 589822, 17, 0, 589823, 17, 0, 524288, 17, 0, 524289, 17, 0, 524290, 17, 0, 524291, 17, 0, 524292, 17, 0, 524293, 17, 0, 524294, 17, 0, 524295, 17, 0, 524296, 17, 0, 524297, 17, 0, 524298, 17, 0, 524299, 17, 0, 524300, 17, 0, 524301, 17, 0, 524302, 17, 0, 524303, 17, 0, 524304, 17, 0, 524305, 17, 0, 524306, 17, 0, 524324, 16, 0, 524325, 17, 0, 524326, 17, 0, 524327, 17, 0, 524328, 17, 0, 524329, 17, 0, 524330, 17, 0, 524331, 17, 0, 524332, 17, 0, 524333, 17, 0, 524334, 17, 0, 524335, 17, 0, 655356, 22, 0, 655357, 22, 0, 655358, 22, 0, 655359, 22, 0, 589824, 22, 0, 589825, 22, 0, 589826, 22, 0, 589827, 22, 0, 589828, 22, 0, 589829, 22, 0, 589830, 22, 0, 589831, 22, 0, 589832, 22, 0, 589833, 22, 0, 589834, 22, 0, 589835, 22, 0, 589836, 22, 0, 589837, 22, 0, 589838, 22, 0, 589839, 22, 0, 589840, 22, 0, 589841, 22, 0, 589842, 22, 0, 589843, 22, 0, 589844, 22, 0, 589845, 22, 0, 589846, 22, 0, 589847, 22, 0, 589848, 22, 0, 589849, 22, 0, 589850, 22, 0, 589851, 22, 0, 589852, 22, 0, 589853, 22, 0, 589854, 22, 0, 589855, 22, 0, 589856, 22, 0, 589857, 22, 0, 589858, 22, 0, 589859, 22, 0, 589860, 22, 0, 589861, 22, 0, 589862, 22, 0, 589863, 22, 0, 589864, 22, 0, 589865, 22, 0, 589866, 22, 0, 589867, 22, 0, 589868, 22, 0, 589869, 22, 0, 589870, 22, 0, 589871, 22, 0 )
 
@@ -970,7 +970,7 @@ wait_time = 2.0
 one_shot = true
 
 [node name="Traps" type="TileMap" parent="."]
-tile_set = SubResource( 22 )
+tile_set = SubResource( 23 )
 collision_layer = 2
 collision_mask = 2
 format = 1
@@ -980,20 +980,20 @@ tile_data = PoolIntArray( 458757, 4, 0, 458758, 4, 0, 458759, 4, 0, 458771, 2, 0
 position = Vector2( 416.859, 495.83 )
 
 [node name="SpikesShape" type="CollisionShape2D" parent="TrapsArea"]
-shape = SubResource( 23 )
+shape = SubResource( 24 )
 
 [node name="AcidShape" type="CollisionShape2D" parent="TrapsArea"]
 position = Vector2( 1343.13, 29.2601 )
-shape = SubResource( 24 )
+shape = SubResource( 25 )
 
 [node name="WinArea" type="Area2D" parent="."]
 
 [node name="WinShape" type="CollisionShape2D" parent="WinArea"]
 position = Vector2( 2768.47, 260.436 )
-shape = SubResource( 25 )
+shape = SubResource( 26 )
 
 [node name="Secrets" type="TileMap" parent="."]
-tile_set = SubResource( 26 )
+tile_set = SubResource( 27 )
 format = 1
 tile_data = PoolIntArray( 262137, 0, 0, 262138, 0, 0, 262139, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 1, 0, 327673, 0, 0, 327674, 0, 0, 327675, 0, 0, 327676, 0, 0, 327677, 0, 0, 327678, 0, 0, 327679, 1, 0 )
 
@@ -1011,7 +1011,7 @@ __meta__ = {
 [node name="TimeLabel" type="Label" parent="TimeHUD"]
 margin_right = 86.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 27 )
+custom_fonts/font = SubResource( 28 )
 text = "x:xx"
 
 [node name="SecondsTimer" type="Timer" parent="TimeHUD"]
@@ -1037,7 +1037,7 @@ margin_bottom = 102.0
 [node name="GameOverLabel" type="Label" parent="GameOverLoseHUD/VBoxContainer"]
 margin_right = 353.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 28 )
+custom_fonts/font = SubResource( 29 )
 custom_colors/font_color = Color( 0.858824, 0, 0, 1 )
 text = "GAME OVER"
 align = 1
@@ -1056,14 +1056,14 @@ alignment = 1
 margin_left = 21.0
 margin_right = 174.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 30 )
 text = "Try Again"
 
 [node name="MainMenuButton" type="Button" parent="GameOverLoseHUD/VBoxContainer/HBoxContainer"]
 margin_left = 178.0
 margin_right = 332.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 30 )
+custom_fonts/font = SubResource( 31 )
 text = "Main Menu"
 
 [node name="GameOverWinHUD" type="MarginContainer" parent="."]
@@ -1082,7 +1082,7 @@ margin_bottom = 102.0
 [node name="GameOverLabel" type="Label" parent="GameOverWinHUD/VBoxContainer"]
 margin_right = 353.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 28 )
+custom_fonts/font = SubResource( 29 )
 custom_colors/font_color = Color( 0.027451, 0.858824, 0, 1 )
 text = "YOU WIN"
 align = 1
@@ -1101,14 +1101,14 @@ alignment = 1
 margin_left = 12.0
 margin_right = 183.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 32 )
 text = "Next Level"
 
 [node name="MainMenuButton" type="Button" parent="GameOverWinHUD/VBoxContainer/HBoxContainer"]
 margin_left = 187.0
 margin_right = 341.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 30 )
+custom_fonts/font = SubResource( 31 )
 text = "Main Menu"
 
 [node name="PausePopup" type="Popup" parent="."]
@@ -1125,7 +1125,7 @@ __meta__ = {
 [node name="PauseLabel" type="Label" parent="PausePopup"]
 margin_right = 437.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 33 )
 text = "Game Paused"
 
 [node name="Unpause" type="Button" parent="PausePopup"]
@@ -1133,7 +1133,7 @@ margin_left = 170.0
 margin_top = 100.0
 margin_right = 284.0
 margin_bottom = 133.0
-custom_fonts/font = SubResource( 33 )
+custom_fonts/font = SubResource( 34 )
 text = "RESUME"
 
 [node name="InstructionsPopup" type="Popup" parent="."]
@@ -1148,8 +1148,8 @@ margin_left = -46.7194
 margin_top = -14.6833
 margin_right = 297.281
 margin_bottom = 132.317
-custom_styles/normal = SubResource( 34 )
-custom_fonts/font = SubResource( 35 )
+custom_styles/normal = SubResource( 35 )
+custom_fonts/font = SubResource( 36 )
 text = "Instructions:
 Left/Right to move player
 Up to jump!

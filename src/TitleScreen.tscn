@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/Tiles/BGTile (1).png" type="Texture" id=2]
@@ -75,6 +75,16 @@ font_data = ExtResource( 6 )
 size = 35
 font_data = ExtResource( 7 )
 
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 7 )
+
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -102,16 +112,62 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StartButton" type="Button" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 432.871
 margin_top = 410.276
 margin_right = 590.871
-margin_bottom = 462.276
+margin_bottom = 486.276
+size_flags_horizontal = 5
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+margin_left = 27.0
+margin_right = 185.0
+margin_bottom = 52.0
 hint_tooltip = "Start the game!"
+size_flags_horizontal = 4
 custom_fonts/font = SubResource( 3 )
 text = "BEGIN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InstructionsButton" type="Button" parent="VBoxContainer"]
+margin_top = 56.0
+margin_right = 212.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 4 )
+text = "Instructions"
+
+[node name="InstructionsPopup" type="Popup" parent="."]
+margin_left = 317.0
+margin_top = 187.0
+margin_right = 357.0
+margin_bottom = 227.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions" type="Label" parent="InstructionsPopup"]
+margin_right = 431.0
+margin_bottom = 254.0
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "How to play!
+Keyboard:
+- WASD or arrow keys to move and jump
+- Tab to pause game, space to unpause
+
+Controller:
+- Left stick to move left or right
+- Cross/A/B to jump!
+- Options/Start/+ to pause
+- Circle/B/A to unpause"
+align = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -120,4 +176,5 @@ __meta__ = {
 stream = ExtResource( 8 )
 volume_db = -10.0
 autoplay = true
-[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/InstructionsButton" to="." method="_on_InstructionsButton_pressed"]

@@ -3,12 +3,18 @@ A basic 2D platformer game by Andrew Stafford.
 Continued from a previous project: [P2-SciFi-Platformer](https://github.com/bsu-cs315/P2-SciFi-Platformer)
 
 ### How to Play:
-- Left/Right to move player left or right
-- Up to jump!
+#### Keyboard:
+- Left/Right or A/D to move player left or right
+- Up or W to jump!
 - Tab to pause game, space to unpause
+#### Controller:
+- Left stick to move left or right
+- Cross/A/B to jump!
+- Options/Start/+ to pause
+- Circle/B/A to unpause
 
 ### GitHub Pages Web Release
-[LABS: The Platform Experiment](https://bsu-cs315.github.io/P2-SciFi-Platformer/)
+[LABS: The Platform Experiment](https://bsu-cs315.github.io/FP-LABS/)
 
 ## Project Report
 ### Reflection:
@@ -22,12 +28,12 @@ Continued from a previous project: [P2-SciFi-Platformer](https://github.com/bsu-
 - [x] C-1: Your repository is well-formed, with an appropriate <code>.gitignore</code> file and no unnecessary files tracked.
 - [ ] C-2: Your release is tagged using <a href="https://semver.org/">semantic versioning</a> where the major version is zero, the minor version is the iteration number, and the patch version is incremented as usual for each change made to the minor version, and the release name matches the release tag.
 - [x] C-3: You have a clear legal right to use all incorporated assets, and the licenses for all third-party assets are tracked in the <code>README.md</code> file.
-- [ ] C-4: The <code>README.md</code> contains instructions for how to play the game or such instructions are incorporated into the game itself.
+- [x] C-4: The <code>README.md</code> contains instructions for how to play the game or such instructions are incorporated into the game itself.
 - [x] C-5: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of T or less.
 - [x] C-6: The release demonstrates the core gameplay loop: the player can take action that moves them toward a goal.
 - [ ] B-1: The <code>README.md</code> file contains a personal reflection on the iteration and self-evaluation, as defined above.
 - [ ] B-2: The game runs without errors or warnings.
-- [ ] B-3: The playable game is published to GitHub Pages and linked from the <code>README.md</code> file, or executable builds are provided for download as part of the GitHub release.
+- [x] B-3: The playable game is published to GitHub Pages and linked from the <code>README.md</code> file, or executable builds are provided for download as part of the GitHub release.
 - [ ] B-4: The source code and project structure comply with our adopted style guides.
 - [x] B-5: Clear progress has been made on the game with respect to the project plan.
 - [ ] A-1: The source code contains no warnings: all warnings are properly addressed, not just ignored.

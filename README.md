@@ -32,11 +32,11 @@ Continued from a previous project: [P2-SciFi-Platformer](https://github.com/bsu-
 - [x] C-5: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of T or less.
 - [x] C-6: The release demonstrates the core gameplay loop: the player can take action that moves them toward a goal.
 - [ ] B-1: The <code>README.md</code> file contains a personal reflection on the iteration and self-evaluation, as defined above.
-- [ ] B-2: The game runs without errors or warnings.
+- [x] B-2: The game runs without errors or warnings.
 - [x] B-3: The playable game is published to GitHub Pages and linked from the <code>README.md</code> file, or executable builds are provided for download as part of the GitHub release.
 - [ ] B-4: The source code and project structure comply with our adopted style guides.
 - [x] B-5: Clear progress has been made on the game with respect to the project plan.
-- [ ] A-1: The source code contains no warnings: all warnings are properly addressed, not just ignored.
+- [x] A-1: The source code contains no warnings: all warnings are properly addressed, not just ignored.
 - [x] A-2: The game includes the conventional player experience loop of title, gameplay, and ending.
 - [ ] A-3: Earn <em>N</em>*&lceil;<em>P</em>/2&rceil; stars, where <em>N</em> is the iteration number and <em>P</em> is the number of people on the team.
 - [ ] ⭐ Include a dynamic (non-static) camera

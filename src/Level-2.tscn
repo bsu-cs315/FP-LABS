@@ -1150,19 +1150,48 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PauseLabel" type="Label" parent="PausePopup"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PausePopup"]
+margin_right = 40.0
+margin_bottom = 40.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseLabel" type="Label" parent="PausePopup/VBoxContainer"]
 margin_right = 437.0
 margin_bottom = 65.0
 custom_fonts/font = SubResource( 36 )
 text = "Game Paused"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Unpause" type="Button" parent="PausePopup"]
-margin_left = 170.0
-margin_top = 100.0
-margin_right = 284.0
-margin_bottom = 133.0
+[node name="HBoxContainer" type="HBoxContainer" parent="PausePopup/VBoxContainer"]
+margin_top = 69.0
+margin_right = 437.0
+margin_bottom = 102.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Unpause" type="Button" parent="PausePopup/VBoxContainer/HBoxContainer"]
+margin_left = 82.0
+margin_right = 196.0
+margin_bottom = 33.0
 custom_fonts/font = SubResource( 37 )
 text = "RESUME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenuButton" type="Button" parent="PausePopup/VBoxContainer/HBoxContainer"]
+margin_left = 200.0
+margin_right = 354.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 35 )
+text = "Main Menu"
 
 [node name="InstructionsPopup" type="Popup" parent="."]
 margin_left = 204.832
@@ -1207,4 +1236,5 @@ stream = ExtResource( 12 )
 [connection signal="pressed" from="GameOverLoseHUD/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 [connection signal="pressed" from="GameOverWinHUD/VBoxContainer/HBoxContainer/ReplayButton" to="." method="_on_RetryButton_pressed"]
 [connection signal="pressed" from="GameOverWinHUD/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
-[connection signal="pressed" from="PausePopup/Unpause" to="." method="_on_Unpause_pressed"]
+[connection signal="pressed" from="PausePopup/VBoxContainer/HBoxContainer/Unpause" to="." method="_on_Unpause_pressed"]
+[connection signal="pressed" from="PausePopup/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

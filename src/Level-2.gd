@@ -18,10 +18,10 @@ onready var traps_area = $TrapsArea
 onready var death_sound_player = $DeathSoundPlayer
 onready var win_sound_player = $WinSoundPlayer
 
-onready var timer_hud = $TimeHUD
-onready var time_label = $TimeHUD/TimeLabel
-onready var seconds_timer = $TimeHUD/SecondsTimer
-onready var minutes_timer = $TimeHUD/MinutesTimer
+onready var timer_hud = $TimeHUDLayer/TimeHUD
+onready var time_label = $TimeHUDLayer/TimeHUD/TimeLabel
+onready var seconds_timer = $TimeHUDLayer/TimeHUD/SecondsTimer
+onready var minutes_timer = $TimeHUDLayer/TimeHUD/MinutesTimer
 var seconds := 0
 var minutes := 0
 
@@ -34,8 +34,6 @@ func _ready():
 
 
 func _process(_delta):
-	if player:
-		timer_hud.rect_position.x = player_cam.get_camera_position().x - 43
 	if seconds <= 9:
 		time_label.text = str(minutes) + ":0" + str(seconds)
 	else:

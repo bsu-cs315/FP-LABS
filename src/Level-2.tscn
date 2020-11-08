@@ -1018,25 +1018,27 @@ shape = SubResource( 31 )
 
 [node name="LevelCam" type="Camera2D" parent="."]
 
-[node name="TimeHUD" type="MarginContainer" parent="."]
-margin_left = 331.359
-margin_top = 32.7579
-margin_right = 417.359
-margin_bottom = 72.7579
+[node name="TimeHUDLayer" type="CanvasLayer" parent="."]
+
+[node name="TimeHUD" type="MarginContainer" parent="TimeHUDLayer"]
+margin_left = 469.0
+margin_top = 32.0
+margin_right = 555.0
+margin_bottom = 72.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TimeLabel" type="Label" parent="TimeHUD"]
+[node name="TimeLabel" type="Label" parent="TimeHUDLayer/TimeHUD"]
 margin_right = 86.0
 margin_bottom = 40.0
 custom_fonts/font = SubResource( 32 )
 text = "x:xx"
 
-[node name="SecondsTimer" type="Timer" parent="TimeHUD"]
+[node name="SecondsTimer" type="Timer" parent="TimeHUDLayer/TimeHUD"]
 autostart = true
 
-[node name="MinutesTimer" type="Timer" parent="TimeHUD"]
+[node name="MinutesTimer" type="Timer" parent="TimeHUDLayer/TimeHUD"]
 wait_time = 60.0
 autostart = true
 
@@ -1192,8 +1194,8 @@ stream = ExtResource( 12 )
 [connection signal="timeout" from="Player/QueueFreeTimer" to="." method="_on_QueueFreeTimer_timeout"]
 [connection signal="body_shape_entered" from="TrapsArea" to="." method="_on_TrapsArea_body_shape_entered"]
 [connection signal="body_shape_entered" from="WinArea" to="." method="_on_WinArea_body_shape_entered"]
-[connection signal="timeout" from="TimeHUD/SecondsTimer" to="." method="_on_SecondsTimer_timeout"]
-[connection signal="timeout" from="TimeHUD/MinutesTimer" to="." method="_on_MinutesTimer_timeout"]
+[connection signal="timeout" from="TimeHUDLayer/TimeHUD/SecondsTimer" to="." method="_on_SecondsTimer_timeout"]
+[connection signal="timeout" from="TimeHUDLayer/TimeHUD/MinutesTimer" to="." method="_on_MinutesTimer_timeout"]
 [connection signal="pressed" from="GameOverLoseHUD/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_RetryButton_pressed"]
 [connection signal="pressed" from="GameOverLoseHUD/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 [connection signal="pressed" from="GameOverWinHUD/VBoxContainer/HBoxContainer/ReplayButton" to="." method="_on_RetryButton_pressed"]

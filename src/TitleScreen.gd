@@ -5,7 +5,7 @@ onready var music_player = $IntroPlayer
 onready var background = $ParallaxBackground
 onready var background_layer = $ParallaxBackground/ParallaxLayer
 
-var level_scene_path = "res://src/Level.tscn"
+var level_scene_path = "res://src/Level-1.tscn"
 
 
 func _process(_delta):

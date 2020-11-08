@@ -788,20 +788,20 @@ points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
 } ]
 32/z_index = 0
 
-[sub_resource type="DynamicFont" id=41]
+[sub_resource type="DynamicFont" id=21]
 size = 14
 font_data = ExtResource( 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=21]
+[sub_resource type="ConvexPolygonShape2D" id=22]
 points = PoolVector2Array( 29, 0, 54, 11, 61, 31, 55, 51, 36, 63, 8, 53, 0, 31, 9, 11 )
 
-[sub_resource type="ConvexPolygonShape2D" id=22]
+[sub_resource type="ConvexPolygonShape2D" id=23]
 points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
 
-[sub_resource type="ConvexPolygonShape2D" id=23]
+[sub_resource type="ConvexPolygonShape2D" id=24]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 32, 0, 32 )
 
-[sub_resource type="TileSet" id=24]
+[sub_resource type="TileSet" id=25]
 1/name = "Saw.png 1"
 1/texture = ExtResource( 7 )
 1/tex_offset = Vector2( 0, 0 )
@@ -812,14 +812,14 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 32, 0, 32 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 21 )
+1/shape = SubResource( 22 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 21 ),
+"shape": SubResource( 22 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
@@ -861,14 +861,14 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 32, 0, 32 )
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 0, 0 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 22 )
+4/shape = SubResource( 23 )
 4/shape_one_way = false
 4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 22 ),
+"shape": SubResource( 23 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
@@ -882,70 +882,70 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 32, 0, 32 )
 5/navigation_offset = Vector2( 0, 0 )
 5/shape_offset = Vector2( 0, 0 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 23 )
+5/shape = SubResource( 24 )
 5/shape_one_way = false
 5/shape_one_way_margin = 1.0
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 23 ),
+"shape": SubResource( 24 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 5/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=25]
+[sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 72.6574, 18.9495 )
 
-[sub_resource type="RectangleShape2D" id=26]
+[sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 94.0148, 20.2844 )
 
-[sub_resource type="RectangleShape2D" id=27]
+[sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 64.6483, 20.2844 )
 
-[sub_resource type="RectangleShape2D" id=28]
+[sub_resource type="RectangleShape2D" id=29]
 extents = Vector2( 29.9424, 20.2844 )
 
-[sub_resource type="RectangleShape2D" id=29]
+[sub_resource type="RectangleShape2D" id=30]
 extents = Vector2( 61.9792, 20.2844 )
 
-[sub_resource type="RectangleShape2D" id=30]
+[sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 33.9473, 20.2844 )
 
-[sub_resource type="RectangleShape2D" id=40]
+[sub_resource type="RectangleShape2D" id=32]
 extents = Vector2( 102.024, 25.6238 )
 
-[sub_resource type="RectangleShape2D" id=31]
+[sub_resource type="RectangleShape2D" id=33]
 extents = Vector2( 31.6658, 34.3632 )
 
-[sub_resource type="DynamicFont" id=32]
+[sub_resource type="DynamicFont" id=34]
 size = 30
 font_data = ExtResource( 16 )
 
-[sub_resource type="DynamicFont" id=33]
-size = 50
-font_data = ExtResource( 16 )
-
-[sub_resource type="DynamicFont" id=34]
-size = 20
-font_data = ExtResource( 16 )
-
 [sub_resource type="DynamicFont" id=35]
-size = 20
+size = 50
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=36]
-size = 50
+size = 20
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=37]
 size = 20
 font_data = ExtResource( 16 )
 
-[sub_resource type="StyleBoxFlat" id=38]
-bg_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+[sub_resource type="DynamicFont" id=38]
+size = 50
+font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=39]
+size = 20
+font_data = ExtResource( 16 )
+
+[sub_resource type="StyleBoxFlat" id=40]
+bg_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+
+[sub_resource type="DynamicFont" id=41]
 font_data = ExtResource( 16 )
 
 [node name="Level-2" type="Node2D"]
@@ -977,7 +977,7 @@ margin_left = 41.6223
 margin_top = 318.707
 margin_right = 269.622
 margin_bottom = 361.707
-custom_fonts/font = SubResource( 41 )
+custom_fonts/font = SubResource( 21 )
 text = "In the air, press jump
 again to double jump!"
 align = 1
@@ -990,7 +990,7 @@ margin_left = 420.979
 margin_top = 121.299
 margin_right = 648.979
 margin_bottom = 164.299
-custom_fonts/font = SubResource( 41 )
+custom_fonts/font = SubResource( 21 )
 text = "Reach the end fence
 to continue testing!"
 align = 1
@@ -1006,7 +1006,7 @@ wait_time = 2.0
 one_shot = true
 
 [node name="Traps" type="TileMap" parent="."]
-tile_set = SubResource( 24 )
+tile_set = SubResource( 25 )
 collision_layer = 2
 collision_mask = 2
 format = 1
@@ -1017,41 +1017,41 @@ position = Vector2( 416.859, 495.83 )
 
 [node name="SpikesShape1" type="CollisionShape2D" parent="TrapsArea"]
 position = Vector2( 349.728, -2.66977 )
-shape = SubResource( 25 )
+shape = SubResource( 26 )
 
 [node name="SpikesShape2" type="CollisionShape2D" parent="TrapsArea"]
 position = Vector2( 511.244, -735.497 )
-shape = SubResource( 26 )
+shape = SubResource( 27 )
 
 [node name="SpikesShape3" type="CollisionShape2D" parent="TrapsArea"]
 position = Vector2( 1246.74, -730.157 )
-shape = SubResource( 27 )
+shape = SubResource( 28 )
 
 [node name="SpikesShape4" type="CollisionShape2D" parent="TrapsArea"]
 position = Vector2( 1725.95, 60.068 )
-shape = SubResource( 28 )
+shape = SubResource( 29 )
 
 [node name="SpikesShape5" type="CollisionShape2D" parent="TrapsArea"]
 position = Vector2( 1919.5, 62.7376 )
-shape = SubResource( 28 )
+shape = SubResource( 29 )
 
 [node name="SpikesShape6" type="CollisionShape2D" parent="TrapsArea"]
 position = Vector2( 2078.35, -731.492 )
-shape = SubResource( 29 )
+shape = SubResource( 30 )
 
 [node name="SpikesShape7" type="CollisionShape2D" parent="TrapsArea"]
 position = Vector2( 2369.34, -731.492 )
-shape = SubResource( 30 )
+shape = SubResource( 31 )
 
 [node name="AcidShape" type="CollisionShape2D" parent="TrapsArea"]
 position = Vector2( 1342.85, 125.475 )
-shape = SubResource( 40 )
+shape = SubResource( 32 )
 
 [node name="WinArea" type="Area2D" parent="."]
 
 [node name="WinShape" type="CollisionShape2D" parent="WinArea"]
 position = Vector2( 2789.82, -86.7646 )
-shape = SubResource( 31 )
+shape = SubResource( 33 )
 
 [node name="LevelCam" type="Camera2D" parent="."]
 
@@ -1069,7 +1069,7 @@ __meta__ = {
 [node name="TimeLabel" type="Label" parent="TimeHUDLayer/TimeHUD"]
 margin_right = 86.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 34 )
 text = "x:xx"
 
 [node name="SecondsTimer" type="Timer" parent="TimeHUDLayer/TimeHUD"]
@@ -1095,7 +1095,7 @@ margin_bottom = 102.0
 [node name="GameOverLabel" type="Label" parent="GameOverLoseHUD/VBoxContainer"]
 margin_right = 353.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 33 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0.858824, 0, 0, 1 )
 text = "GAME OVER"
 align = 1
@@ -1114,14 +1114,14 @@ alignment = 1
 margin_left = 21.0
 margin_right = 174.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 36 )
 text = "Try Again"
 
 [node name="MainMenuButton" type="Button" parent="GameOverLoseHUD/VBoxContainer/HBoxContainer"]
 margin_left = 178.0
 margin_right = 332.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 35 )
+custom_fonts/font = SubResource( 37 )
 text = "Main Menu"
 
 [node name="GameOverWinHUD" type="MarginContainer" parent="."]
@@ -1140,7 +1140,7 @@ margin_bottom = 102.0
 [node name="GameOverLabel" type="Label" parent="GameOverWinHUD/VBoxContainer"]
 margin_right = 353.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 33 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0.027451, 0.858824, 0, 1 )
 text = "YOU WIN"
 align = 1
@@ -1159,14 +1159,14 @@ alignment = 1
 margin_left = 12.0
 margin_right = 183.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 36 )
 text = "Play Again"
 
 [node name="MainMenuButton" type="Button" parent="GameOverWinHUD/VBoxContainer/HBoxContainer"]
 margin_left = 187.0
 margin_right = 341.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 35 )
+custom_fonts/font = SubResource( 37 )
 text = "Main Menu"
 
 [node name="PausePopup" type="Popup" parent="."]
@@ -1191,7 +1191,7 @@ __meta__ = {
 [node name="PauseLabel" type="Label" parent="PausePopup/VBoxContainer"]
 margin_right = 437.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 36 )
+custom_fonts/font = SubResource( 38 )
 text = "Game Paused"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1210,7 +1210,7 @@ __meta__ = {
 margin_left = 82.0
 margin_right = 196.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 37 )
+custom_fonts/font = SubResource( 39 )
 text = "RESUME"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1220,7 +1220,7 @@ __meta__ = {
 margin_left = 200.0
 margin_right = 354.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 35 )
+custom_fonts/font = SubResource( 37 )
 text = "Main Menu"
 
 [node name="InstructionsPopup" type="Popup" parent="."]
@@ -1237,8 +1237,8 @@ margin_left = -175.154
 margin_top = 26.9389
 margin_right = 262.846
 margin_bottom = 173.939
-custom_styles/normal = SubResource( 38 )
-custom_fonts/font = SubResource( 39 )
+custom_styles/normal = SubResource( 40 )
+custom_fonts/font = SubResource( 41 )
 text = "Good work recruit!
 Simple movement looks great. Now, to
 something a little more challenging: 

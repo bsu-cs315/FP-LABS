@@ -787,17 +787,17 @@ points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
 } ]
 32/z_index = 0
 
-[sub_resource type="DynamicFont" id=37]
+[sub_resource type="DynamicFont" id=21]
 size = 14
 font_data = ExtResource( 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=21]
+[sub_resource type="ConvexPolygonShape2D" id=22]
 points = PoolVector2Array( 29, 0, 54, 11, 61, 31, 55, 51, 36, 63, 8, 53, 0, 31, 9, 11 )
 
-[sub_resource type="ConvexPolygonShape2D" id=22]
+[sub_resource type="ConvexPolygonShape2D" id=23]
 points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
 
-[sub_resource type="TileSet" id=23]
+[sub_resource type="TileSet" id=24]
 1/name = "Saw.png 1"
 1/texture = ExtResource( 7 )
 1/tex_offset = Vector2( 0, 0 )
@@ -808,14 +808,14 @@ points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 21 )
+1/shape = SubResource( 22 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 21 ),
+"shape": SubResource( 22 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
@@ -857,28 +857,28 @@ points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 0, 0 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 22 )
+4/shape = SubResource( 23 )
 4/shape_one_way = false
 4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 22 ),
+"shape": SubResource( 23 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=24]
+[sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 98.6408, 27.3295 )
 
-[sub_resource type="RectangleShape2D" id=25]
+[sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 555.156, 58.6305 )
 
-[sub_resource type="RectangleShape2D" id=26]
+[sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 48.075, 58.8565 )
 
-[sub_resource type="TileSet" id=27]
+[sub_resource type="TileSet" id=28]
 0/name = "Tile (5).png 0"
 0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
@@ -908,16 +908,12 @@ extents = Vector2( 48.075, 58.8565 )
 1/shapes = [  ]
 1/z_index = 0
 
-[sub_resource type="DynamicFont" id=28]
+[sub_resource type="DynamicFont" id=29]
 size = 30
 font_data = ExtResource( 16 )
 
-[sub_resource type="DynamicFont" id=29]
-size = 50
-font_data = ExtResource( 16 )
-
 [sub_resource type="DynamicFont" id=30]
-size = 20
+size = 50
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=31]
@@ -929,17 +925,21 @@ size = 20
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=33]
-size = 50
-font_data = ExtResource( 16 )
-
-[sub_resource type="DynamicFont" id=34]
 size = 20
 font_data = ExtResource( 16 )
 
-[sub_resource type="StyleBoxFlat" id=35]
+[sub_resource type="DynamicFont" id=34]
+size = 50
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=35]
+size = 20
+font_data = ExtResource( 16 )
+
+[sub_resource type="StyleBoxFlat" id=36]
 bg_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
 
-[sub_resource type="DynamicFont" id=36]
+[sub_resource type="DynamicFont" id=37]
 font_data = ExtResource( 16 )
 
 [node name="Level-1" type="Node2D"]
@@ -971,7 +971,7 @@ margin_left = 24.0
 margin_top = 209.0
 margin_right = 252.0
 margin_bottom = 252.0
-custom_fonts/font = SubResource( 37 )
+custom_fonts/font = SubResource( 21 )
 text = "A/D, left/right,
 or left stick to run!"
 align = 1
@@ -984,7 +984,7 @@ margin_left = 247.0
 margin_top = 266.0
 margin_right = 475.0
 margin_bottom = 309.0
-custom_fonts/font = SubResource( 37 )
+custom_fonts/font = SubResource( 21 )
 text = "W, up, or Cross/A/B
 to jump!"
 align = 1
@@ -997,7 +997,7 @@ margin_left = 278.0
 margin_top = 395.0
 margin_right = 506.0
 margin_bottom = 438.0
-custom_fonts/font = SubResource( 37 )
+custom_fonts/font = SubResource( 21 )
 text = "Watch out
 for traps!"
 align = 1
@@ -1010,7 +1010,7 @@ margin_left = 721.0
 margin_top = 105.0
 margin_right = 949.0
 margin_bottom = 148.0
-custom_fonts/font = SubResource( 37 )
+custom_fonts/font = SubResource( 21 )
 text = "Reach the end fence
 to continue testing!"
 align = 1
@@ -1026,7 +1026,7 @@ wait_time = 2.0
 one_shot = true
 
 [node name="Traps" type="TileMap" parent="."]
-tile_set = SubResource( 23 )
+tile_set = SubResource( 24 )
 collision_layer = 2
 collision_mask = 2
 format = 1
@@ -1036,20 +1036,20 @@ tile_data = PoolIntArray( 458757, 4, 0, 458758, 4, 0, 458759, 4, 0, 458771, 2, 0
 position = Vector2( 416.859, 495.83 )
 
 [node name="SpikesShape" type="CollisionShape2D" parent="TrapsArea"]
-shape = SubResource( 24 )
+shape = SubResource( 25 )
 
 [node name="AcidShape" type="CollisionShape2D" parent="TrapsArea"]
 position = Vector2( 1343.13, 29.2601 )
-shape = SubResource( 25 )
+shape = SubResource( 26 )
 
 [node name="WinArea" type="Area2D" parent="."]
 
 [node name="WinShape" type="CollisionShape2D" parent="WinArea"]
 position = Vector2( 2768.47, 260.436 )
-shape = SubResource( 26 )
+shape = SubResource( 27 )
 
 [node name="Secrets" type="TileMap" parent="."]
-tile_set = SubResource( 27 )
+tile_set = SubResource( 28 )
 format = 1
 tile_data = PoolIntArray( 262137, 0, 0, 262138, 0, 0, 262139, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 1, 0, 327673, 0, 0, 327674, 0, 0, 327675, 0, 0, 327676, 0, 0, 327677, 0, 0, 327678, 0, 0, 327679, 1, 0 )
 
@@ -1067,7 +1067,7 @@ __meta__ = {
 [node name="TimeLabel" type="Label" parent="TimeHUD"]
 margin_right = 86.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 28 )
+custom_fonts/font = SubResource( 29 )
 text = "x:xx"
 
 [node name="SecondsTimer" type="Timer" parent="TimeHUD"]
@@ -1093,7 +1093,7 @@ margin_bottom = 102.0
 [node name="GameOverLabel" type="Label" parent="GameOverLoseHUD/VBoxContainer"]
 margin_right = 353.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 30 )
 custom_colors/font_color = Color( 0.858824, 0, 0, 1 )
 text = "GAME OVER"
 align = 1
@@ -1112,14 +1112,14 @@ alignment = 1
 margin_left = 21.0
 margin_right = 174.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 30 )
+custom_fonts/font = SubResource( 31 )
 text = "Try Again"
 
 [node name="MainMenuButton" type="Button" parent="GameOverLoseHUD/VBoxContainer/HBoxContainer"]
 margin_left = 178.0
 margin_right = 332.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 32 )
 text = "Main Menu"
 
 [node name="GameOverWinHUD" type="MarginContainer" parent="."]
@@ -1138,7 +1138,7 @@ margin_bottom = 102.0
 [node name="GameOverLabel" type="Label" parent="GameOverWinHUD/VBoxContainer"]
 margin_right = 353.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 30 )
 custom_colors/font_color = Color( 0.027451, 0.858824, 0, 1 )
 text = "YOU WIN"
 align = 1
@@ -1157,14 +1157,14 @@ alignment = 1
 margin_left = 12.0
 margin_right = 183.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 33 )
 text = "Next Level"
 
 [node name="MainMenuButton" type="Button" parent="GameOverWinHUD/VBoxContainer/HBoxContainer"]
 margin_left = 187.0
 margin_right = 341.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 32 )
 text = "Main Menu"
 
 [node name="PausePopup" type="Popup" parent="."]
@@ -1185,7 +1185,7 @@ margin_bottom = 40.0
 [node name="PauseLabel" type="Label" parent="PausePopup/VBoxContainer"]
 margin_right = 437.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 33 )
+custom_fonts/font = SubResource( 34 )
 text = "Game Paused"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1201,7 +1201,7 @@ alignment = 1
 margin_left = 82.0
 margin_right = 196.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 text = "RESUME"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1211,7 +1211,7 @@ __meta__ = {
 margin_left = 200.0
 margin_right = 354.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 32 )
 text = "Main Menu"
 
 [node name="InstructionsPopup" type="Popup" parent="."]
@@ -1228,8 +1228,8 @@ margin_left = -245.719
 margin_top = -146.683
 margin_right = 336.281
 margin_bottom = 200.317
-custom_styles/normal = SubResource( 35 )
-custom_fonts/font = SubResource( 36 )
+custom_styles/normal = SubResource( 36 )
+custom_fonts/font = SubResource( 37 )
 text = "Welcome to the team!
 We here at LABS are very excited to have you here
 

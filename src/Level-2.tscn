@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=2]
+[gd_scene load_steps=84 format=2]
 
 [ext_resource path="res://assets/Tiles/BGTile (6).png" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/Tile (5).png" type="Texture" id=2]
@@ -908,6 +908,9 @@ extents = Vector2( 61.9792, 20.2844 )
 [sub_resource type="RectangleShape2D" id=30]
 extents = Vector2( 33.9473, 20.2844 )
 
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 102.024, 25.6238 )
+
 [sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 31.6658, 34.3632 )
 
@@ -1009,6 +1012,10 @@ shape = SubResource( 29 )
 [node name="SpikesShape7" type="CollisionShape2D" parent="TrapsArea"]
 position = Vector2( 2369.34, -731.492 )
 shape = SubResource( 30 )
+
+[node name="AcidShape" type="CollisionShape2D" parent="TrapsArea"]
+position = Vector2( 1342.85, 125.475 )
+shape = SubResource( 40 )
 
 [node name="WinArea" type="Area2D" parent="."]
 

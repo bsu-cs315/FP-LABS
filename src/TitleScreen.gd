@@ -1,12 +1,12 @@
 extends Node2D
 
 
-onready var music_player = $IntroPlayer
-onready var background = $ParallaxBackground
-onready var background_layer = $ParallaxBackground/ParallaxLayer
-onready var instructions_popup = $InstructionsPopup
+onready var music_player := $IntroPlayer
+onready var background := $ParallaxBackground
+onready var background_layer := $ParallaxBackground/ParallaxLayer
+onready var instructions_popup := $InstructionsPopup
 
-var level_scene_path = "res://src/Level-1.tscn"
+var level_scene_path := "res://src/Level-1.tscn"
 
 
 func _ready():

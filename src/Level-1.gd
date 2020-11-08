@@ -1,32 +1,32 @@
 extends Node2D
 
 
-onready var instructions_popup = $InstructionsPopup
-onready var pause_popup = $PausePopup
+onready var instructions_popup := $InstructionsPopup
+onready var pause_popup := $PausePopup
 
-onready var player = $Player
-onready var player_cam = $Player/PlayerCam
-onready var player_sprite = $Player/AnimatedSprite
-onready var queue_free_timer = $Player/QueueFreeTimer
+onready var player := $Player
+onready var player_cam := $Player/PlayerCam
+onready var player_sprite := $Player/AnimatedSprite
+onready var queue_free_timer := $Player/QueueFreeTimer
 
-onready var parallax_background = $ParallaxBackground
-onready var level_cam = $LevelCam
-onready var game_over_lose_hud = $GameOverLoseHUD
-onready var game_over_win_hud = $GameOverWinHUD
-onready var traps_area = $TrapsArea
+onready var parallax_background := $ParallaxBackground
+onready var level_cam := $LevelCam
+onready var game_over_lose_hud := $GameOverLoseHUD
+onready var game_over_win_hud := $GameOverWinHUD
+onready var traps_area := $TrapsArea
 
-onready var death_sound_player = $DeathSoundPlayer
-onready var win_sound_player = $WinSoundPlayer
+onready var death_sound_player := $DeathSoundPlayer
+onready var win_sound_player := $WinSoundPlayer
 
-onready var timer_hud = $TimeHUD
-onready var time_label = $TimeHUD/TimeLabel
-onready var seconds_timer = $TimeHUD/SecondsTimer
-onready var minutes_timer = $TimeHUD/MinutesTimer
+onready var timer_hud := $TimeHUD
+onready var time_label := $TimeHUD/TimeLabel
+onready var seconds_timer := $TimeHUD/SecondsTimer
+onready var minutes_timer := $TimeHUD/MinutesTimer
 var seconds := 0
 var minutes := 0
 
-var main_scene_path = "res://src/TitleScreen.tscn"
-var level2_scene_path = "res://src/Level-2.tscn"
+var main_scene_path := "res://src/TitleScreen.tscn"
+var level2_scene_path := "res://src/Level-2.tscn"
 
 
 func _ready():

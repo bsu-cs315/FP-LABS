@@ -8,6 +8,11 @@ onready var background_layer = $ParallaxBackground/ParallaxLayer
 var level_scene_path = "res://src/Level-1.tscn"
 
 
+func _ready():
+	if get_tree().paused:
+		get_tree().paused = false
+
+
 func _process(_delta):
 	background_layer.position += background.scroll_offset
 	if background_layer.position <= Vector2(-1026, -600):

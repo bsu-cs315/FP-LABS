@@ -52,7 +52,7 @@ Continued from a previous project: [P2-SciFi-Platformer](https://github.com/bsu-
 - [ ] ⭐ Incorporate pop into your HUD or title screen using <code>Tween</code> or <code>AnimationPlayer</code>
 - [ ] ⭐ Include an AI-controlled characters
 - [ ] ⭐ Include an AI-controlled character controlled with a different AI
-- [ ] ⭐ Add a pause menu that includes, at minimum, the ability to resume or return to the main menu
+- [x] ⭐ Add a pause menu that includes, at minimum, the ability to resume or return to the main menu
 - [ ] ⭐ The game is released publicly on <code>itch.io</code>, with all the recommended accompanying text, screenshots, gameplay videos, <i>etc.</i>
 
 

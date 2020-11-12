@@ -4,7 +4,7 @@ extends KinematicBody2D
 const GRAVITY = 900.0
 const RUN_SPEED = 100
 
-var _velocity := Vector2()
+var _e_velocity := Vector2()
 var _direction := 1
 
 onready var enemy_sprite = $AnimatedSprite
@@ -18,9 +18,9 @@ func _physics_process(delta):
 		enemy_sprite.flip_h = true
 	enemy_sprite.play("run")
 	
-	_velocity.y += GRAVITY * delta
-	_velocity.x = RUN_SPEED * _direction
-	var _ignored = move_and_slide(_velocity, Vector2.UP)
+	_e_velocity.y += GRAVITY * delta
+	_e_velocity.x = RUN_SPEED * _direction
+	_e_velocity = move_and_slide(_e_velocity, Vector2.UP)
 	
 	if is_on_wall():
 		_direction *= -1

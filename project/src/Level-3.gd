@@ -79,8 +79,8 @@ func game_over(screen_center, end_status):
 		game_over_win_hud.set_position(game_over_pos)
 
 
-func _on_TrapsArea_body_shape_entered(body_id, _body, _body_shape, _area_shape):
-	if body_id == player.get_instance_id():
+func _on_Player_player_hit(body):
+	if body.is_in_group("enemies"):
 		kill_player()
 
 

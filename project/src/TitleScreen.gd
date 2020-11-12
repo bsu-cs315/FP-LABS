@@ -7,6 +7,7 @@ onready var background_layer := $ParallaxBackground/ParallaxLayer
 onready var instructions_popup := $InstructionsPopup
 
 var level_scene_path := "res://src/Level-1.tscn"
+var credits_scene_path := "res://src/CreditsScreen.tscn"
 
 
 func _ready():
@@ -26,3 +27,7 @@ func _on_StartButton_pressed():
 
 func _on_InstructionsButton_pressed():
 	instructions_popup.popup()
+
+
+func _on_CreditsButton_pressed():
+	var _ignored = get_tree().change_scene(credits_scene_path)

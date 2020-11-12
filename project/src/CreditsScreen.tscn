@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/CreditsScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/Tiles/BGTile (1).png" type="Texture" id=2]
@@ -71,7 +71,23 @@
 size = 55
 font_data = ExtResource( 6 )
 
+[sub_resource type="DynamicFont" id=4]
+size = 25
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 28
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 25
+font_data = ExtResource( 7 )
+
 [sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=6]
 size = 20
 font_data = ExtResource( 7 )
 
@@ -98,16 +114,160 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Credits" type="Label" parent="." groups=[
+[node name="GameDevelopCredit" type="Label" parent="." groups=[
 "credits",
 ]]
-margin_left = 166.5
-margin_top = 295.545
-margin_right = 862.5
-margin_bottom = 426.545
-custom_fonts/font = SubResource( 3 )
+margin_left = 74.3542
+margin_top = 335.129
+margin_right = 979.354
+margin_bottom = 466.129
+custom_fonts/font = SubResource( 4 )
 text = "Game Design and Development - Andrew Stafford"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ThirdPartyHeader" type="Label" parent="." groups=[
+"credits",
+]]
+margin_left = 165.373
+margin_top = 428.455
+margin_right = 861.373
+margin_bottom = 559.455
+custom_fonts/font = SubResource( 5 )
+text = "Third-Party Assets"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ThirdPartyTypeHeaders" type="Label" parent="." groups=[
+"credits",
+]]
+margin_left = 153.881
+margin_top = 481.584
+margin_right = 849.881
+margin_bottom = 1197.58
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0.866667, 0.745098, 1 )
+custom_constants/line_spacing = 5
+text = "Textures
+
+
+
+
+
+
+Sounds
+
+
+
+
+
+
+
+Fonts"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ThirdPartyAssets" type="Label" parent="." groups=[
+"credits",
+]]
+margin_left = -11.4525
+margin_top = 526.771
+margin_right = 1022.55
+margin_bottom = 823.771
+custom_fonts/font = SubResource( 3 )
+text = "\"The Robot\" sprite set - gameart2d.com
+
+\"Ninja Adventure\" sprite set - gameart2d.com
+
+\"Sci-Fi Platformer\" tileset - gameart2d.com
+
+\"Cogwheel\" texture - rawpixel.com
+
+
+\"Chiptune Intro\" - zagi2 under CC BY-NC 3.0,
+		no changes were made
+		
+\"2018-11-02\" - Doctor_Dreamchip
+
+\"Electric Zap\" - michael_grinnell
+
+\"8bit Jump\" - plasterbrain
+
+
+\"Fino\" - dafont.com
+
+\"Retro Computer\" - dafont.com"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsVisibility" type="VisibilityNotifier2D" parent="ThirdPartyAssets"]
+position = Vector2( 515.421, 677.714 )
+scale = Vector2( 18.0089, 1 )
+
+[node name="RawpixelLink" type="LinkButton" parent="." groups=[
+"credits",
+]]
+margin_left = 562.577
+margin_top = 705.856
+margin_right = 804.577
+margin_bottom = 732.856
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
+text = "rawpixel.com"
+underline = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChiptuneLink" type="LinkButton" parent="." groups=[
+"credits",
+]]
+margin_left = 196.74
+margin_top = 796.291
+margin_right = 438.74
+margin_bottom = 823.291
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
+text = "\"Chiptune Intro\""
+underline = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Zagi2Link" type="LinkButton" parent="." groups=[
+"credits",
+]]
+margin_left = 463.978
+margin_top = 796.231
+margin_right = 705.978
+margin_bottom = 823.231
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
+text = "zagi2"
+underline = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CCBYNCLink" type="LinkButton" parent="." groups=[
+"credits",
+]]
+margin_left = 645.507
+margin_top = 795.983
+margin_right = 887.507
+margin_bottom = 822.983
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
+text = "CC BY-NC 3.0"
+underline = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -116,3 +276,8 @@ __meta__ = {
 stream = ExtResource( 8 )
 volume_db = -10.0
 autoplay = true
+[connection signal="screen_exited" from="ThirdPartyAssets/CreditsVisibility" to="." method="_on_CreditsVisibility_screen_exited"]
+[connection signal="pressed" from="RawpixelLink" to="." method="_on_RawpixelLink_pressed"]
+[connection signal="pressed" from="ChiptuneLink" to="." method="_on_ChiptuneName_pressed"]
+[connection signal="pressed" from="Zagi2Link" to="." method="_on_Zagi2Link_pressed"]
+[connection signal="pressed" from="CCBYNCLink" to="." method="_on_CCBYNCLink_pressed"]

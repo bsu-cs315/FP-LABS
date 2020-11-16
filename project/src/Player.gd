@@ -13,6 +13,8 @@ var shake_intensity := 0.0
 var is_airborne := false
 var double_jump_enabled := false
 var jump_count := 0
+var melee_enabled := false
+var prev_anim : String
 
 onready var player_sprite = $AnimatedSprite
 onready var player_cam = $PlayerCam
@@ -32,6 +34,9 @@ func _process(_delta):
 func _physics_process(delta):
 	_velocity.y += GRAVITY * delta
 	
+	if melee_enabled and Input.is_action_just_pressed("melee"):
+		attack_melee(player_sprite.animation)
+	
 	if Input.is_action_pressed("move_right"):
 		player_sprite.flip_h = false
 		_velocity.x = run_speed
@@ -40,11 +45,12 @@ func _physics_process(delta):
 		_velocity.x = -run_speed
 	else:
 		_velocity.x = 0
-		
-	if is_on_floor():
-		player_sprite.animation = "run" if abs(_velocity.x) > 0 else "idle"
-	else:
-		player_sprite.animation = "idle" if _velocity.y > 0 else "jump"
+	
+	if player_sprite.animation != "melee":
+		if is_on_floor():
+			player_sprite.animation = "run" if abs(_velocity.x) > 0 else "idle"
+		else:
+			player_sprite.animation = "idle" if _velocity.y > 0 else "jump"
 	if _velocity.x or _velocity.y != 0:
 		player_sprite.play()
 	else:
@@ -64,6 +70,17 @@ func _physics_process(delta):
 		jump_count = 0
 	
 	_velocity = move_and_slide(_velocity, Vector2.UP)
+
+
+func attack_melee(current_anim):
+	prev_anim = current_anim
+	player_sprite.animation = "melee"
+	player_sprite.play()
+
+
+func _on_AnimatedSprite_animation_finished():
+	if player_sprite.animation == "melee":
+		player_sprite.animation = prev_anim
 
 
 func explode_cogwheels():
@@ -104,3 +121,7 @@ func enable_level_2():
 	player_cam.limit_bottom = 620
 	player_cam.drag_margin_top = 0.5
 	player_cam.drag_margin_v_enabled = true
+
+
+func enable_level_3():
+	melee_enabled = true

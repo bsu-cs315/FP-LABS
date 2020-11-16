@@ -13,7 +13,6 @@ onready var parallax_background := $ParallaxBackground
 onready var level_cam := $LevelCam
 onready var game_over_lose_hud := $GameOverLoseHUD
 onready var game_over_win_hud := $GameOverWinHUD
-onready var traps_area := $TrapsArea
 
 onready var death_sound_player := $DeathSoundPlayer
 onready var win_sound_player := $WinSoundPlayer
@@ -29,7 +28,7 @@ var main_scene_path := "res://src/TitleScreen.tscn"
 
 
 func _ready():
-#	player.enable_level_2()
+	player.enable_level_3()
 	instructions_popup.popup()
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://assets/character/Idle (7).png" type="Texture" id=1]
 [ext_resource path="res://assets/character/Idle (9).png" type="Texture" id=2]
@@ -29,6 +29,22 @@
 [ext_resource path="res://assets/character/Jump (10).png" type="Texture" id=27]
 [ext_resource path="res://assets/character/Jump (3).png" type="Texture" id=28]
 [ext_resource path="res://assets/cogwheel.png" type="Texture" id=29]
+[ext_resource path="res://assets/character/Melee (3).png" type="Texture" id=30]
+[ext_resource path="res://assets/character/Melee (8).png" type="Texture" id=31]
+[ext_resource path="res://assets/character/JumpMelee (2).png" type="Texture" id=32]
+[ext_resource path="res://assets/character/JumpMelee (6).png" type="Texture" id=33]
+[ext_resource path="res://assets/character/Melee (2).png" type="Texture" id=34]
+[ext_resource path="res://assets/character/Melee (5).png" type="Texture" id=35]
+[ext_resource path="res://assets/character/Melee (6).png" type="Texture" id=36]
+[ext_resource path="res://assets/character/Melee (4).png" type="Texture" id=37]
+[ext_resource path="res://assets/character/Melee (7).png" type="Texture" id=38]
+[ext_resource path="res://assets/character/JumpMelee (1).png" type="Texture" id=39]
+[ext_resource path="res://assets/character/Melee (1).png" type="Texture" id=40]
+[ext_resource path="res://assets/character/JumpMelee (3).png" type="Texture" id=41]
+[ext_resource path="res://assets/character/JumpMelee (4).png" type="Texture" id=42]
+[ext_resource path="res://assets/character/JumpMelee (5).png" type="Texture" id=43]
+[ext_resource path="res://assets/character/JumpMelee (7).png" type="Texture" id=44]
+[ext_resource path="res://assets/character/JumpMelee (8).png" type="Texture" id=45]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -46,6 +62,16 @@ animations = [ {
 "loop": true,
 "name": "run",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 32 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 33 ), ExtResource( 44 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "jumpMelee",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 34 ), ExtResource( 30 ), ExtResource( 37 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "melee",
+"speed": 10.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -62,6 +88,7 @@ script = ExtResource( 19 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
 animation = "idle"
+frame = 7
 
 [node name="PlayerShape" type="CollisionShape2D" parent="."]
 position = Vector2( -4.48985, 2.24493 )

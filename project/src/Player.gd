@@ -15,8 +15,11 @@ var double_jump_enabled := false
 var jump_count := 0
 var melee_enabled := false
 var prev_anim : String
+var current_melee_collision : Area2D = melee_collision_right
 
 onready var player_sprite = $AnimatedSprite
+onready var melee_collision_right = $MeleeAreaRight/MeleeAreaRightShape
+onready var melee_collision_left = $MeleeAreaLeft/MeleeAreaLeftShape
 onready var player_cam = $PlayerCam
 onready var shake_timer = $ShakeTime
 onready var jump_player = $JumpSound
@@ -40,9 +43,11 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
 		player_sprite.flip_h = false
 		_velocity.x = run_speed
+		current_melee_collision = melee_collision_right
 	elif Input.is_action_pressed("move_left"):
 		player_sprite.flip_h = true
 		_velocity.x = -run_speed
+		current_melee_collision = melee_collision_left
 	else:
 		_velocity.x = 0
 	
@@ -74,6 +79,7 @@ func _physics_process(delta):
 
 func attack_melee(current_anim):
 	prev_anim = current_anim
+	current_melee_collision.disabled = false
 	player_sprite.animation = "melee"
 	player_sprite.play()
 

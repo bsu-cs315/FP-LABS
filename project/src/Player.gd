@@ -15,7 +15,7 @@ var double_jump_enabled := false
 var jump_count := 0
 var melee_enabled := false
 var prev_anim : String
-var current_melee_collision : Area2D = melee_collision_right
+var current_melee_collision : CollisionShape2D = melee_collision_right
 
 onready var player_sprite = $AnimatedSprite
 onready var melee_collision_right = $MeleeAreaRight/MeleeAreaRightShape
@@ -28,6 +28,8 @@ onready var cogwheels = $Cogwheels
 
 func _ready():
 	player_cam.offset_h = BEGINNING_CAMERA_OFFSET
+	melee_collision_left.disabled = true
+	melee_collision_right.disabled = true
 
 
 func _process(_delta):
@@ -87,6 +89,8 @@ func attack_melee(current_anim):
 func _on_AnimatedSprite_animation_finished():
 	if player_sprite.animation == "melee":
 		player_sprite.animation = prev_anim
+		melee_collision_left.disabled = true
+		melee_collision_right.disabled = true
 
 
 func explode_cogwheels():
@@ -115,6 +119,10 @@ func camera_shake():
 
 func _on_PlayerArea_body_shape_entered(_body_id, body, _body_shape, _area_shape):
 	emit_signal("player_hit", body)
+
+
+func _on_melee_collision_entered(_body_id, body, _body_shape, _area_shape):
+	print("struck by " + str(body))
 
 
 func _on_ShakeTime_timeout():

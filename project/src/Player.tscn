@@ -63,14 +63,14 @@ animations = [ {
 "name": "run",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 39 ), ExtResource( 32 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 33 ), ExtResource( 44 ), ExtResource( 45 ) ],
-"loop": false,
-"name": "jumpMelee",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 40 ), ExtResource( 34 ), ExtResource( 30 ), ExtResource( 37 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 31 ) ],
 "loop": false,
 "name": "melee",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 32 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 33 ), ExtResource( 44 ), ExtResource( 45 ) ],
+"loop": false,
+"name": "jumpMelee",
 "speed": 10.0
 } ]
 
@@ -152,4 +152,6 @@ angle_random = 1.0
 wait_time = 0.5
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_shape_entered" from="PlayerArea" to="." method="_on_PlayerArea_body_shape_entered"]
+[connection signal="body_shape_entered" from="MeleeAreaRight" to="." method="_on_melee_collision_entered"]
+[connection signal="body_shape_entered" from="MeleeAreaLeft" to="." method="_on_melee_collision_entered"]
 [connection signal="timeout" from="ShakeTime" to="." method="_on_ShakeTime_timeout"]

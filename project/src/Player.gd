@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 
 signal player_hit(body)
+signal enemy_hit(body)
 
 const GRAVITY = 900.0
 const JUMP_SPEED = 520
@@ -122,7 +123,8 @@ func _on_PlayerArea_body_shape_entered(_body_id, body, _body_shape, _area_shape)
 
 
 func _on_melee_collision_entered(_body_id, body, _body_shape, _area_shape):
-	print("struck by " + str(body))
+	if body.is_in_group("enemies"):
+		emit_signal("enemy_hit", body)
 
 
 func _on_ShakeTime_timeout():

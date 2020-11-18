@@ -88,6 +88,10 @@ func _on_WinArea_body_shape_entered(body_id, _body, _body_shape, _area_shape):
 		win_player()
 
 
+func _on_Player_enemy_hit(body):
+	remove_child(body)
+
+
 func _on_RetryButton_pressed():
 	var _ignored = get_tree().reload_current_scene()
 

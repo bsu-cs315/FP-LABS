@@ -981,27 +981,29 @@ position = Vector2( 2202.34, 336.399 )
 ] instance=ExtResource( 30 )]
 position = Vector2( 2555.12, 113.393 )
 
-[node name="SoulCollectible" parent="." groups=[
+[node name="SoulGroup" type="Node2D" parent="."]
+
+[node name="SoulCollectible" parent="SoulGroup" groups=[
 "collectibles",
 ] instance=ExtResource( 36 )]
 position = Vector2( 372.222, 447.142 )
 
-[node name="SoulCollectible2" parent="." groups=[
+[node name="SoulCollectible2" parent="SoulGroup" groups=[
 "collectibles",
 ] instance=ExtResource( 36 )]
 position = Vector2( 897.851, 298.491 )
 
-[node name="SoulCollectible3" parent="." groups=[
+[node name="SoulCollectible3" parent="SoulGroup" groups=[
 "collectibles",
 ] instance=ExtResource( 36 )]
 position = Vector2( 225.949, 124.867 )
 
-[node name="SoulCollectible4" parent="." groups=[
+[node name="SoulCollectible4" parent="SoulGroup" groups=[
 "collectibles",
 ] instance=ExtResource( 36 )]
 position = Vector2( 2787.5, 325.843 )
 
-[node name="SoulCollectible5" parent="." groups=[
+[node name="SoulCollectible5" parent="SoulGroup" groups=[
 "collectibles",
 ] instance=ExtResource( 36 )]
 position = Vector2( 2226.2, 99.8934 )
@@ -1050,7 +1052,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CollectCountLabel" type="Label" parent="InfoHUDLayer"]
+[node name="SoulCountLabel" type="Label" parent="InfoHUDLayer"]
 margin_left = 15.4597
 margin_top = 35.6762
 margin_right = 370.46

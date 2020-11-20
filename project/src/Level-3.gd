@@ -13,7 +13,8 @@ var enemy_count := 0
 onready var enemy_count_label := $InfoHUDLayer/EnemyCountLabel
 
 var soul_count := 0
-onready var soul_count_label := $InfoHUDLayer/CollectCountLabel
+onready var soul_count_label := $InfoHUDLayer/SoulCountLabel
+onready var soul_group := $SoulGroup
 
 onready var parallax_background := $ParallaxBackground
 onready var level_cam := $LevelCam
@@ -105,7 +106,7 @@ func _on_Player_player_hit(body):
 
 func _on_Player_player_area_hit(area):
 	if area.is_in_group("collectibles"):
-		remove_child(area)
+		soul_group.remove_child(area)
 		soul_count += 1
 
 

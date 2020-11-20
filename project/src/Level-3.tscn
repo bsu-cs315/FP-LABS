@@ -1245,6 +1245,7 @@ stream = ExtResource( 8 )
 [node name="WinSoundPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
 [connection signal="enemy_hit" from="Player" to="." method="_on_Player_enemy_hit"]
+[connection signal="player_area_hit" from="Player" to="." method="_on_Player_player_area_hit"]
 [connection signal="player_hit" from="Player" to="." method="_on_Player_player_hit"]
 [connection signal="timeout" from="Player/QueueFreeTimer" to="." method="_on_QueueFreeTimer_timeout"]
 [connection signal="timeout" from="InfoHUDLayer/TimeHUD/SecondsTimer" to="." method="_on_SecondsTimer_timeout"]

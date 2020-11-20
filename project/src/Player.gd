@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 
 signal player_hit(body)
+signal player_area_hit(area)
 signal enemy_hit(body)
 
 const GRAVITY = 900.0
@@ -120,7 +121,10 @@ func camera_shake():
 
 func _on_PlayerArea_body_shape_entered(_body_id, body, _body_shape, _area_shape):
 	emit_signal("player_hit", body)
-	print("hit by " + str(body))
+
+
+func _on_PlayerArea_area_shape_entered(_area_id, area, _area_shape, _self_shape):
+	emit_signal("player_area_hit", area)
 
 
 func _on_melee_collision_entered(_body_id, body, _body_shape, _area_shape):

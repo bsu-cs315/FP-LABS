@@ -9,6 +9,9 @@ onready var player_cam := $Player/PlayerCam
 onready var player_sprite := $Player/AnimatedSprite
 onready var queue_free_timer := $Player/QueueFreeTimer
 
+var enemy_count := 0
+onready var enemy_count_label := $InfoHUDLayer/EnemyCountLabel
+
 onready var parallax_background := $ParallaxBackground
 onready var level_cam := $LevelCam
 onready var game_over_lose_hud := $GameOverLoseHUD
@@ -17,10 +20,10 @@ onready var game_over_win_hud := $GameOverWinHUD
 onready var death_sound_player := $DeathSoundPlayer
 onready var win_sound_player := $WinSoundPlayer
 
-onready var timer_hud := $TimeHUDLayer/TimeHUD
-onready var time_label := $TimeHUDLayer/TimeHUD/TimeLabel
-onready var seconds_timer := $TimeHUDLayer/TimeHUD/SecondsTimer
-onready var minutes_timer := $TimeHUDLayer/TimeHUD/MinutesTimer
+onready var timer_hud := $InfoHUDLayer/TimeHUD
+onready var time_label := $InfoHUDLayer/TimeHUD/TimeLabel
+onready var seconds_timer := $InfoHUDLayer/TimeHUD/SecondsTimer
+onready var minutes_timer := $InfoHUDLayer/TimeHUD/MinutesTimer
 var seconds := 0
 var minutes := 0
 
@@ -30,6 +33,9 @@ var main_scene_path := "res://src/TitleScreen.tscn"
 func _ready():
 	player.enable_level_3()
 	instructions_popup.popup()
+	
+	for enemy in get_tree().get_nodes_in_group("enemies"):
+		enemy_count += 1
 
 
 func _process(_delta):
@@ -38,6 +44,7 @@ func _process(_delta):
 	else:
 		time_label.text = str(minutes) + ":" + str(seconds)
 	
+	enemy_count_label.text = str(enemy_count)
 	
 	if Input.is_action_just_pressed("pause_game"):
 		get_tree().paused = true
@@ -56,6 +63,12 @@ func kill_player():
 	seconds_timer.stop()
 	minutes_timer.stop()
 	queue_free_timer.start()
+
+
+func kill_enemy(body):
+	remove_child(body)
+	enemy_count -= 1
+	
 
 
 func win_player():
@@ -83,13 +96,8 @@ func _on_Player_player_hit(body):
 		kill_player()
 
 
-func _on_WinArea_body_shape_entered(body_id, _body, _body_shape, _area_shape):
-	if body_id == player.get_instance_id():
-		win_player()
-
-
 func _on_Player_enemy_hit(body):
-	remove_child(body)
+	kill_enemy(body)
 
 
 func _on_RetryButton_pressed():

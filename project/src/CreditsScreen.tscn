@@ -71,23 +71,23 @@
 size = 55
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 25
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=4]
 size = 28
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=5]
 size = 25
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=6]
 size = 20
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=7]
 size = 20
 font_data = ExtResource( 7 )
 
@@ -121,7 +121,7 @@ margin_left = 74.3542
 margin_top = 335.129
 margin_right = 979.354
 margin_bottom = 466.129
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "Game Design and Development - Andrew Stafford"
 align = 1
 __meta__ = {
@@ -135,7 +135,7 @@ margin_left = 165.373
 margin_top = 428.455
 margin_right = 861.373
 margin_bottom = 559.455
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 text = "Third-Party Assets"
 align = 1
 __meta__ = {
@@ -149,7 +149,7 @@ margin_left = 153.881
 margin_top = 481.584
 margin_right = 849.881
 margin_bottom = 1197.58
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0.866667, 0.745098, 1 )
 custom_constants/line_spacing = 5
 text = "Textures
@@ -180,7 +180,7 @@ margin_left = -11.4525
 margin_top = 526.771
 margin_right = 1022.55
 margin_bottom = 823.771
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 6 )
 text = "\"The Robot\" sprite set - gameart2d.com
 
 \"Ninja Adventure\" sprite set - gameart2d.com
@@ -219,7 +219,7 @@ margin_left = 562.577
 margin_top = 705.856
 margin_right = 804.577
 margin_bottom = 732.856
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
 text = "rawpixel.com"
 underline = 1
@@ -234,7 +234,7 @@ margin_left = 196.74
 margin_top = 796.291
 margin_right = 438.74
 margin_bottom = 823.291
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
 text = "\"Chiptune Intro\""
 underline = 1
@@ -249,7 +249,7 @@ margin_left = 463.978
 margin_top = 796.231
 margin_right = 705.978
 margin_bottom = 823.231
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
 text = "zagi2"
 underline = 1
@@ -264,7 +264,7 @@ margin_left = 645.507
 margin_top = 795.983
 margin_right = 887.507
 margin_bottom = 822.983
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
 text = "CC BY-NC 3.0"
 underline = 1

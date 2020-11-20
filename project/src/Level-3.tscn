@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://assets/Tiles/BGTile (6).png" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/Tile (5).png" type="Texture" id=2]
@@ -871,6 +871,10 @@ font_data = ExtResource( 16 )
 size = 30
 font_data = ExtResource( 16 )
 
+[sub_resource type="DynamicFont" id=32]
+size = 30
+font_data = ExtResource( 16 )
+
 [sub_resource type="DynamicFont" id=25]
 size = 50
 font_data = ExtResource( 16 )
@@ -983,9 +987,9 @@ one_shot = true
 
 [node name="LevelCam" type="Camera2D" parent="."]
 
-[node name="TimeHUDLayer" type="CanvasLayer" parent="."]
+[node name="InfoHUDLayer" type="CanvasLayer" parent="."]
 
-[node name="TimeHUD" type="MarginContainer" parent="TimeHUDLayer"]
+[node name="TimeHUD" type="MarginContainer" parent="InfoHUDLayer"]
 margin_left = 469.0
 margin_top = 32.0
 margin_right = 555.0
@@ -994,18 +998,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TimeLabel" type="Label" parent="TimeHUDLayer/TimeHUD"]
+[node name="TimeLabel" type="Label" parent="InfoHUDLayer/TimeHUD"]
 margin_right = 86.0
 margin_bottom = 40.0
 custom_fonts/font = SubResource( 24 )
 text = "x:xx"
 
-[node name="SecondsTimer" type="Timer" parent="TimeHUDLayer/TimeHUD"]
+[node name="SecondsTimer" type="Timer" parent="InfoHUDLayer/TimeHUD"]
 autostart = true
 
-[node name="MinutesTimer" type="Timer" parent="TimeHUDLayer/TimeHUD"]
+[node name="MinutesTimer" type="Timer" parent="InfoHUDLayer/TimeHUD"]
 wait_time = 60.0
 autostart = true
+
+[node name="EnemyCountLabel" type="Label" parent="InfoHUDLayer"]
+margin_left = 497.851
+margin_top = 71.8441
+margin_right = 537.851
+margin_bottom = 111.844
+custom_fonts/font = SubResource( 32 )
+text = "N"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="GameOverLoseHUD" type="MarginContainer" parent="."]
 margin_left = 134.929
@@ -1191,8 +1206,8 @@ stream = ExtResource( 12 )
 [connection signal="enemy_hit" from="Player" to="." method="_on_Player_enemy_hit"]
 [connection signal="player_hit" from="Player" to="." method="_on_Player_player_hit"]
 [connection signal="timeout" from="Player/QueueFreeTimer" to="." method="_on_QueueFreeTimer_timeout"]
-[connection signal="timeout" from="TimeHUDLayer/TimeHUD/SecondsTimer" to="." method="_on_SecondsTimer_timeout"]
-[connection signal="timeout" from="TimeHUDLayer/TimeHUD/MinutesTimer" to="." method="_on_MinutesTimer_timeout"]
+[connection signal="timeout" from="InfoHUDLayer/TimeHUD/SecondsTimer" to="." method="_on_SecondsTimer_timeout"]
+[connection signal="timeout" from="InfoHUDLayer/TimeHUD/MinutesTimer" to="." method="_on_MinutesTimer_timeout"]
 [connection signal="pressed" from="GameOverLoseHUD/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_RetryButton_pressed"]
 [connection signal="pressed" from="GameOverLoseHUD/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 [connection signal="pressed" from="GameOverWinHUD/VBoxContainer/HBoxContainer/ReplayButton" to="." method="_on_RetryButton_pressed"]

@@ -46,6 +46,9 @@ func _process(_delta):
 	
 	enemy_count_label.text = str(enemy_count)
 	
+	if enemy_count <= 0:
+		win_player()
+	
 	if Input.is_action_just_pressed("pause_game"):
 		get_tree().paused = true
 		var screen_center = player_cam.get_camera_screen_center()

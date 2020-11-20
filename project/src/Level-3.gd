@@ -44,7 +44,7 @@ func _process(_delta):
 	else:
 		time_label.text = str(minutes) + ":" + str(seconds)
 	
-	enemy_count_label.text = str(enemy_count)
+	enemy_count_label.text = "Enemies left: " + str(enemy_count)
 	
 	if enemy_count <= 0:
 		win_player()

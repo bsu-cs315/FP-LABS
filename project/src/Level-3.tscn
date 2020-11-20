@@ -1012,12 +1012,12 @@ wait_time = 60.0
 autostart = true
 
 [node name="EnemyCountLabel" type="Label" parent="InfoHUDLayer"]
-margin_left = 497.851
-margin_top = 71.8441
-margin_right = 537.851
-margin_bottom = 111.844
+margin_left = 346.822
+margin_top = 64.7089
+margin_right = 680.822
+margin_bottom = 104.709
 custom_fonts/font = SubResource( 32 )
-text = "N"
+text = "Enemies Left: N"
 __meta__ = {
 "_edit_use_anchors_": false
 }

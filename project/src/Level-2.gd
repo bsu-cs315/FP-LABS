@@ -9,6 +9,10 @@ onready var player_cam := $Player/PlayerCam
 onready var player_sprite := $Player/AnimatedSprite
 onready var queue_free_timer := $Player/QueueFreeTimer
 
+var soul_count := 0
+onready var soul_count_label := $InfoHUDLayer/SoulCountLabel
+onready var soul_group := $SoulGroup
+
 onready var parallax_background := $ParallaxBackground
 onready var level_cam := $LevelCam
 onready var game_over_lose_hud := $GameOverLoseHUD
@@ -18,10 +22,10 @@ onready var traps_area := $TrapsArea
 onready var death_sound_player := $DeathSoundPlayer
 onready var win_sound_player := $WinSoundPlayer
 
-onready var timer_hud := $TimeHUDLayer/TimeHUD
-onready var time_label := $TimeHUDLayer/TimeHUD/TimeLabel
-onready var seconds_timer := $TimeHUDLayer/TimeHUD/SecondsTimer
-onready var minutes_timer := $TimeHUDLayer/TimeHUD/MinutesTimer
+onready var timer_hud := $InfoHUDLayer/TimeHUD
+onready var time_label := $InfoHUDLayer/TimeHUD/TimeLabel
+onready var seconds_timer := $InfoHUDLayer/TimeHUD/SecondsTimer
+onready var minutes_timer := $InfoHUDLayer/TimeHUD/MinutesTimer
 var seconds := 0
 var minutes := 0
 
@@ -39,6 +43,8 @@ func _process(_delta):
 		time_label.text = str(minutes) + ":0" + str(seconds)
 	else:
 		time_label.text = str(minutes) + ":" + str(seconds)
+	
+	soul_count_label.text = "Souls collected: " + str(soul_count)
 	
 	
 	if Input.is_action_just_pressed("pause_game"):
@@ -88,6 +94,12 @@ func _on_TrapsArea_body_shape_entered(body_id, _body, _body_shape, _area_shape):
 func _on_WinArea_body_shape_entered(body_id, _body, _body_shape, _area_shape):
 	if body_id == player.get_instance_id():
 		win_player()
+
+
+func _on_Player_player_area_hit(area):
+	if area.is_in_group("collectibles"):
+		soul_group.remove_child(area)
+		soul_count += 1
 
 
 func _on_NextLevelButton_pressed():

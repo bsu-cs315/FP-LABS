@@ -120,6 +120,7 @@ func camera_shake():
 
 func _on_PlayerArea_body_shape_entered(_body_id, body, _body_shape, _area_shape):
 	emit_signal("player_hit", body)
+	print("hit by " + str(body))
 
 
 func _on_melee_collision_entered(_body_id, body, _body_shape, _area_shape):

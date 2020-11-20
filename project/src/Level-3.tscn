@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=2]
+[gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://assets/Tiles/BGTile (6).png" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/Tile (5).png" type="Texture" id=2]
@@ -873,7 +873,11 @@ size = 30
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=32]
-size = 30
+size = 25
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=33]
+size = 25
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=25]
@@ -979,19 +983,29 @@ position = Vector2( 2202.34, 336.399 )
 ] instance=ExtResource( 30 )]
 position = Vector2( 2555.12, 113.393 )
 
-[node name="SoulCollectible" parent="." instance=ExtResource( 36 )]
+[node name="SoulCollectible" parent="." groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
 position = Vector2( 372.222, 447.142 )
 
-[node name="SoulCollectible2" parent="." instance=ExtResource( 36 )]
+[node name="SoulCollectible2" parent="." groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
 position = Vector2( 897.851, 298.491 )
 
-[node name="SoulCollectible3" parent="." instance=ExtResource( 36 )]
+[node name="SoulCollectible3" parent="." groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
 position = Vector2( 225.949, 124.867 )
 
-[node name="SoulCollectible4" parent="." instance=ExtResource( 36 )]
+[node name="SoulCollectible4" parent="." groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
 position = Vector2( 2787.5, 325.843 )
 
-[node name="SoulCollectible5" parent="." instance=ExtResource( 36 )]
+[node name="SoulCollectible5" parent="." groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
 position = Vector2( 2226.2, 99.8934 )
 
 [node name="Player" parent="." instance=ExtResource( 17 )]
@@ -1028,12 +1042,23 @@ wait_time = 60.0
 autostart = true
 
 [node name="EnemyCountLabel" type="Label" parent="InfoHUDLayer"]
-margin_left = 346.822
-margin_top = 64.7089
-margin_right = 680.822
-margin_bottom = 104.709
+margin_left = 705.963
+margin_top = 37.3571
+margin_right = 1039.96
+margin_bottom = 77.3571
 custom_fonts/font = SubResource( 32 )
 text = "Enemies Left: N"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollectCountLabel" type="Label" parent="InfoHUDLayer"]
+margin_left = 15.4597
+margin_top = 35.6762
+margin_right = 370.46
+margin_bottom = 68.6762
+custom_fonts/font = SubResource( 33 )
+text = "Souls collected: M"
 __meta__ = {
 "_edit_use_anchors_": false
 }

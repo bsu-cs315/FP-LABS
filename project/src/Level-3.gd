@@ -97,6 +97,9 @@ func game_over(screen_center, end_status):
 func _on_Player_player_hit(body):
 	if body.is_in_group("enemies"):
 		kill_player()
+	
+	if body.is_in_group("collectibles"):
+		print("Soul hit")
 
 
 func _on_Player_enemy_hit(body):

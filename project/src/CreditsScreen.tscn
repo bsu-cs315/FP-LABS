@@ -159,6 +159,8 @@ text = "Textures
 
 
 
+
+
 Sounds
 
 
@@ -189,6 +191,8 @@ text = "\"The Robot\" sprite set - gameart2d.com
 
 \"Cogwheel\" texture - rawpixel.com
 
+\"The Boy\" texture - gameart2d.com
+
 
 \"Chiptune Intro\" - zagi2 under CC BY-NC 3.0,
 		no changes were made
@@ -209,7 +213,7 @@ __meta__ = {
 }
 
 [node name="CreditsVisibility" type="VisibilityNotifier2D" parent="ThirdPartyAssets"]
-position = Vector2( 515.421, 677.714 )
+position = Vector2( 515.421, 730.714 )
 scale = Vector2( 18.0089, 1 )
 
 [node name="RawpixelLink" type="LinkButton" parent="." groups=[
@@ -231,9 +235,9 @@ __meta__ = {
 "credits",
 ]]
 margin_left = 196.74
-margin_top = 796.291
+margin_top = 856.291
 margin_right = 438.74
-margin_bottom = 823.291
+margin_bottom = 883.291
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
 text = "\"Chiptune Intro\""
@@ -246,9 +250,9 @@ __meta__ = {
 "credits",
 ]]
 margin_left = 463.978
-margin_top = 796.231
+margin_top = 856.231
 margin_right = 705.978
-margin_bottom = 823.231
+margin_bottom = 883.231
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
 text = "zagi2"
@@ -261,9 +265,9 @@ __meta__ = {
 "credits",
 ]]
 margin_left = 645.507
-margin_top = 795.983
+margin_top = 855.983
 margin_right = 887.507
-margin_bottom = 822.983
+margin_bottom = 882.983
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
 text = "CC BY-NC 3.0"

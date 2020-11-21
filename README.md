@@ -69,6 +69,9 @@ Sprites:
 `Sci-Fi Platformer Tileset` licensed under [Creative Common Zero (CCO)](https://creativecommons.org/publicdomain/zero/1.0/). Source: https://www.gameart2d.com/free-sci-fi-platformer-tileset.html
 
 `Cogwheel` texture licensed under Freepik License, created by rawpixel.com. Source: https://www.freepik.com/free-vector/illustration-cogwheel_2609999.htm#page=1&query=gear&position=1
+[Business vector created by rawpixel.com - www.freepik.com](https://www.freepik.com/vectors/business)
+
+`The Boy` sprite set licensed under [Creative Common Zero (CCO)](https://creativecommons.org/publicdomain/zero/1.0/). Source: https://www.gameart2d.com/the-boy---free-sprites.html
 
 <br>
 Sounds:

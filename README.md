@@ -5,11 +5,13 @@ Continued from a previous project: [P2-SciFi-Platformer](https://github.com/bsu-
 ### How to Play:
 #### Keyboard:
 - Left/Right or A/D to move player left or right
-- Up or W to jump!
+- Up or W to jump
+- Space to attack
 - Tab to pause game, space to unpause
 #### Controller:
 - Left stick to move left or right
-- Cross/A/B to jump!
+- Cross/A/B to jump
+- Square/X/Y to attack
 - Options/Start/+ to pause
 - Circle/B/A to unpause
 

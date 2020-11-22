@@ -19,12 +19,13 @@ Continued from a previous project: [P2-SciFi-Platformer](https://github.com/bsu-
 [LABS: The Platform Experiment](https://bsu-cs315.github.io/FP-LABS/)
 
 ## Project Report
+### Layers and Masks Documentation:
+I used layers and masks to add collectibles into my platformer. I created a collectible scene as an <code>Area2D</code> and a sprite for texture, then instanced a few of this scene in each level to give it collectibles. I put the collectibles in a second layer, then set only the player mask to detect collisions in that layer so that only the player would "collide" with the collectible Area2D and be able to pick it up.
+
 ### Reflection:
-This iteration, I actually had some fun working on how I wanted to implement a double jumping mechanic. The basics of the idea were fairly easy, but I had to decide where I wanted to put what, and how connected I wanted everything to be. One of these such decisions was where I wanted to reset the jump count I had to make sure the player cannot jump more than twice. At first, I decided to reset it at the same moment the player jumped from the ground, but I then ran into a new problem. If the player walked off a platform without jumping, they could not jump in mid-air, which I wanted them to be able to do. It was very interesting to see all the intricacies that go into a fairly simple mechanic.
+This iteration, my main goal was getting a melee attack set up, which was a lot of fun. I did not have a plan of how to do this from the start, so a lot of research and trial and error took place. It was a good experience in finding different ways to go about a feature. My main issues with the melee attack were with the animation choosing and playing. Trying to get the animation to play, but not overlap with others or get taken over by others was very difficult. I still have a bit of a polish issue with the animation sometimes getting stuck, but I hope to polish this in the final iteration.
 
-I also had a little fun of my own, working to implement gamepad input from a controller. It turned out to be a lot easier than I thought it was going to be, mainly because with the scope of my game, I did not care about getting specific input from the joystick (where the player could press it lightly to walk or harder to run) and instead only wanted a simple "joystick pressed left, move left" idea. Although this was fun, I am very interested in looking into touch screen input for later interations as well.
-
-### Self/Peer Evaluation:
+I also worked a lot with layers and masks to put collectibles in the game, which wasn't as bad as I thought it would be and was nice to be able to get that feature up and running fairly quickly.
 
 ### Self-Evaluation:
 - [x] D-1: The repository link is submitted to Canvas before the project deadline.
@@ -44,7 +45,7 @@ I also had a little fun of my own, working to implement gamepad input from a con
 - [x] A-1: The source code contains no warnings: all warnings are properly addressed, not just ignored.
 - [x] A-2: The game includes the conventional player experience loop of title, gameplay, and ending.
 - [x] A-3: Earn <em>N</em>*&lceil;<em>P</em>/2&rceil; stars, where <em>N</em> is the iteration number and <em>P</em> is the number of people on the team.
-- [ ] ⭐ Include a dynamic (non-static) camera
+- [x] ⭐ Include a dynamic (non-static) camera
 - [x] ⭐ Incorporate parallax background scrolling
 - [ ] ⭐ Use paper doll animations
 - [ ] ⭐ Incorporate smooth transitions between title, game, and end states, rather than jumping between states via <code>change_scene</code>
@@ -53,7 +54,7 @@ I also had a little fun of my own, working to implement gamepad input from a con
 - [ ] ⭐ Incorporate juiciness and document it in the <code>README.md</code>
 - [ ] ⭐ Incorporate another kind of juiciness and document it in the <code>README.md</code>
 - [x] ⭐ Use particle effects
-- [ ] ⭐ Use different layers and masks to manage collisions and document this in the <code>README.md</code>
+- [x] ⭐ Use different layers and masks to manage collisions and document this in the <code>README.md</code>
 - [ ] ⭐ Incorporate pop into your HUD or title screen using <code>Tween</code> or <code>AnimationPlayer</code>
 - [ ] ⭐ Include an AI-controlled characters
 - [ ] ⭐ Include an AI-controlled character controlled with a different AI

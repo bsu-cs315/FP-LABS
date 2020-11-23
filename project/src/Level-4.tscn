@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://assets/Tiles/BGTile (6).png" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/Tile (5).png" type="Texture" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://assets/Tiles/Fence (1).png" type="Texture" id=27]
 [ext_resource path="res://assets/Tiles/Tile (13).png" type="Texture" id=28]
 [ext_resource path="res://assets/Tiles/Fence (3).png" type="Texture" id=29]
+[ext_resource path="res://src/StandstillEnemy.tscn" type="PackedScene" id=30]
 [ext_resource path="res://assets/Tiles/BGTile (4).png" type="Texture" id=31]
 [ext_resource path="res://assets/Tiles/BGTile (2).png" type="Texture" id=32]
 [ext_resource path="res://assets/Tiles/BGTile (5).png" type="Texture" id=33]
@@ -37,6 +38,7 @@
 [ext_resource path="res://SoulCollectible.tscn" type="PackedScene" id=36]
 [ext_resource path="res://assets/Tiles/Tile (9).png" type="Texture" id=37]
 [ext_resource path="res://assets/Tiles/Fence (2).png" type="Texture" id=38]
+[ext_resource path="res://src/MovingEnemy.tscn" type="PackedScene" id=39]
 [ext_resource path="res://assets/Tiles/Tile (7).png" type="Texture" id=40]
 [ext_resource path="res://assets/Tiles/Tile (4).png" type="Texture" id=41]
 [ext_resource path="res://assets/Tiles/Tile (15.2).png" type="Texture" id=42]
@@ -958,6 +960,56 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="StandstillEnemy" parent="." groups=[
+"enemies",
+] instance=ExtResource( 30 )]
+position = Vector2( 291.328, 147.078 )
+
+[node name="StandstillEnemy2" parent="." groups=[
+"enemies",
+] instance=ExtResource( 30 )]
+position = Vector2( 2011.01, 147.783 )
+
+[node name="StandstillEnemy3" parent="." groups=[
+"enemies",
+] instance=ExtResource( 30 )]
+position = Vector2( 3097.13, 50.9116 )
+
+[node name="StandstillEnemy4" parent="." groups=[
+"enemies",
+] instance=ExtResource( 30 )]
+position = Vector2( 2592.25, 531.744 )
+
+[node name="StandstillEnemy5" parent="." groups=[
+"enemies",
+] instance=ExtResource( 30 )]
+position = Vector2( 382.592, 499.996 )
+
+[node name="MovingEnemy" parent="." groups=[
+"enemies",
+] instance=ExtResource( 39 )]
+position = Vector2( 873.984, 466.69 )
+
+[node name="MovingEnemy2" parent="." groups=[
+"enemies",
+] instance=ExtResource( 39 )]
+position = Vector2( 1009.75, 181.019 )
+
+[node name="MovingEnemy3" parent="." groups=[
+"enemies",
+] instance=ExtResource( 39 )]
+position = Vector2( 1919.09, 528.916 )
+
+[node name="MovingEnemy4" parent="." groups=[
+"enemies",
+] instance=ExtResource( 39 )]
+position = Vector2( 2309.41, 147.078 )
+
+[node name="MovingEnemy5" parent="." groups=[
+"enemies",
+] instance=ExtResource( 39 )]
+position = Vector2( 3155.5, 466.146 )
 
 [node name="SoulGroup" type="Node2D" parent="."]
 visible = false

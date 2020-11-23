@@ -5,18 +5,19 @@ const GRAVITY = 900.0
 const RUN_SPEED = 100
 
 var _e_velocity := Vector2()
-var _direction := 1
+export var _direction : int = 1
 
 onready var enemy_sprite = $AnimatedSprite
 onready var enemy_raycast = $RayCast2D
 
 
 func _physics_process(delta):
-	if get_node(".").name == "MovingEnemy":
-		if _direction == 1:
-			enemy_sprite.flip_h = false
-		else:
-			enemy_sprite.flip_h = true
+	if _direction == 1:
+		enemy_sprite.flip_h = false
+	else:
+		enemy_sprite.flip_h = true
+	
+	if "Moving" in get_node(".").name:
 		enemy_sprite.play("run")
 		
 		_e_velocity.y += GRAVITY * delta

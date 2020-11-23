@@ -970,11 +970,13 @@ position = Vector2( 291.328, 147.078 )
 "enemies",
 ] instance=ExtResource( 30 )]
 position = Vector2( 2011.01, 147.783 )
+_direction = 0
 
 [node name="StandstillEnemy3" parent="." groups=[
 "enemies",
 ] instance=ExtResource( 30 )]
 position = Vector2( 3097.13, 50.9116 )
+_direction = 0
 
 [node name="StandstillEnemy4" parent="." groups=[
 "enemies",
@@ -985,6 +987,7 @@ position = Vector2( 2592.25, 531.744 )
 "enemies",
 ] instance=ExtResource( 30 )]
 position = Vector2( 382.592, 499.996 )
+_direction = 0
 
 [node name="MovingEnemy" parent="." groups=[
 "enemies",
@@ -999,7 +1002,7 @@ position = Vector2( 1009.75, 181.019 )
 [node name="MovingEnemy3" parent="." groups=[
 "enemies",
 ] instance=ExtResource( 39 )]
-position = Vector2( 1919.09, 528.916 )
+position = Vector2( 1922.26, 528.916 )
 
 [node name="MovingEnemy4" parent="." groups=[
 "enemies",

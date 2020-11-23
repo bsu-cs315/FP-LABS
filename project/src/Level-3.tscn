@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://assets/Tiles/BGTile (6).png" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/Tile (5).png" type="Texture" id=2]
@@ -892,6 +892,10 @@ font_data = ExtResource( 16 )
 size = 20
 font_data = ExtResource( 16 )
 
+[sub_resource type="DynamicFont" id=34]
+size = 20
+font_data = ExtResource( 16 )
+
 [sub_resource type="DynamicFont" id=28]
 size = 50
 font_data = ExtResource( 16 )
@@ -1119,7 +1123,7 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameOverWinHUD"]
 margin_right = 353.0
-margin_bottom = 102.0
+margin_bottom = 115.0
 
 [node name="GameOverLabel" type="Label" parent="GameOverWinHUD/VBoxContainer"]
 margin_right = 353.0
@@ -1139,16 +1143,16 @@ margin_right = 353.0
 margin_bottom = 102.0
 alignment = 1
 
-[node name="ReplayButton" type="Button" parent="GameOverWinHUD/VBoxContainer/HBoxContainer"]
-margin_left = 12.0
-margin_right = 183.0
+[node name="CreditsButton" type="Button" parent="GameOverWinHUD/VBoxContainer/HBoxContainer"]
+margin_left = 33.0
+margin_right = 162.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 26 )
-text = "Play Again"
+custom_fonts/font = SubResource( 34 )
+text = "Credits"
 
 [node name="MainMenuButton" type="Button" parent="GameOverWinHUD/VBoxContainer/HBoxContainer"]
-margin_left = 187.0
-margin_right = 341.0
+margin_left = 166.0
+margin_right = 320.0
 margin_bottom = 33.0
 custom_fonts/font = SubResource( 27 )
 text = "Main Menu"
@@ -1252,7 +1256,7 @@ stream = ExtResource( 12 )
 [connection signal="timeout" from="InfoHUDLayer/TimeHUD/MinutesTimer" to="." method="_on_MinutesTimer_timeout"]
 [connection signal="pressed" from="GameOverLoseHUD/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_RetryButton_pressed"]
 [connection signal="pressed" from="GameOverLoseHUD/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
-[connection signal="pressed" from="GameOverWinHUD/VBoxContainer/HBoxContainer/ReplayButton" to="." method="_on_RetryButton_pressed"]
+[connection signal="pressed" from="GameOverWinHUD/VBoxContainer/HBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="GameOverWinHUD/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 [connection signal="pressed" from="PausePopup/VBoxContainer/HBoxContainer/Unpause" to="." method="_on_Unpause_pressed"]
 [connection signal="pressed" from="PausePopup/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

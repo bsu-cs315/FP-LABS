@@ -29,7 +29,7 @@
 [ext_resource path="res://assets/Tiles/Fence (1).png" type="Texture" id=27]
 [ext_resource path="res://assets/Tiles/Tile (13).png" type="Texture" id=28]
 [ext_resource path="res://assets/Tiles/Fence (3).png" type="Texture" id=29]
-[ext_resource path="res://src/Enemy.tscn" type="PackedScene" id=30]
+[ext_resource path="res://src/MovingEnemy.tscn" type="PackedScene" id=30]
 [ext_resource path="res://assets/Tiles/BGTile (4).png" type="Texture" id=31]
 [ext_resource path="res://assets/Tiles/BGTile (2).png" type="Texture" id=32]
 [ext_resource path="res://assets/Tiles/BGTile (5).png" type="Texture" id=33]
@@ -872,42 +872,42 @@ font_data = ExtResource( 16 )
 size = 30
 font_data = ExtResource( 16 )
 
-[sub_resource type="DynamicFont" id=32]
-size = 25
-font_data = ExtResource( 16 )
-
-[sub_resource type="DynamicFont" id=33]
-size = 25
-font_data = ExtResource( 16 )
-
 [sub_resource type="DynamicFont" id=25]
-size = 50
+size = 25
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=26]
-size = 20
+size = 25
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=27]
-size = 20
-font_data = ExtResource( 16 )
-
-[sub_resource type="DynamicFont" id=34]
-size = 20
+size = 50
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=28]
-size = 50
+size = 20
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=29]
 size = 20
 font_data = ExtResource( 16 )
 
-[sub_resource type="StyleBoxFlat" id=30]
-bg_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+[sub_resource type="DynamicFont" id=30]
+size = 20
+font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=31]
+size = 50
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=32]
+size = 20
+font_data = ExtResource( 16 )
+
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+
+[sub_resource type="DynamicFont" id=34]
 font_data = ExtResource( 16 )
 
 [node name="Level-3" type="Node2D"]
@@ -960,27 +960,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Enemy1" parent="." groups=[
+[node name="MovingEnemy1" parent="." groups=[
 "enemies",
 ] instance=ExtResource( 30 )]
 position = Vector2( 836.587, 404.435 )
 
-[node name="Enemy2" parent="." groups=[
+[node name="MovingEnemy2" parent="." groups=[
 "enemies",
 ] instance=ExtResource( 30 )]
 position = Vector2( 272.143, 146.151 )
 
-[node name="Enemy3" parent="." groups=[
+[node name="MovingEnemy3" parent="." groups=[
 "enemies",
 ] instance=ExtResource( 30 )]
 position = Vector2( 1438.83, 178.909 )
 
-[node name="Enemy4" parent="." groups=[
+[node name="MovingEnemy4" parent="." groups=[
 "enemies",
 ] instance=ExtResource( 30 )]
 position = Vector2( 2202.34, 336.399 )
 
-[node name="Enemy5" parent="." groups=[
+[node name="MovingEnemy5" parent="." groups=[
 "enemies",
 ] instance=ExtResource( 30 )]
 position = Vector2( 2555.12, 113.393 )
@@ -1050,7 +1050,7 @@ margin_left = 705.963
 margin_top = 37.3571
 margin_right = 1039.96
 margin_bottom = 77.3571
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 25 )
 text = "Enemies Left: N"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1061,7 +1061,7 @@ margin_left = 15.4597
 margin_top = 35.6762
 margin_right = 370.46
 margin_bottom = 68.6762
-custom_fonts/font = SubResource( 33 )
+custom_fonts/font = SubResource( 26 )
 text = "Souls collected: M"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1083,7 +1083,7 @@ margin_bottom = 102.0
 [node name="GameOverLabel" type="Label" parent="GameOverLoseHUD/VBoxContainer"]
 margin_right = 353.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 25 )
+custom_fonts/font = SubResource( 27 )
 custom_colors/font_color = Color( 0.858824, 0, 0, 1 )
 text = "GAME OVER"
 align = 1
@@ -1102,14 +1102,14 @@ alignment = 1
 margin_left = 21.0
 margin_right = 174.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 28 )
 text = "Try Again"
 
 [node name="MainMenuButton" type="Button" parent="GameOverLoseHUD/VBoxContainer/HBoxContainer"]
 margin_left = 178.0
 margin_right = 332.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 27 )
+custom_fonts/font = SubResource( 29 )
 text = "Main Menu"
 
 [node name="GameOverWinHUD" type="MarginContainer" parent="."]
@@ -1123,12 +1123,12 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameOverWinHUD"]
 margin_right = 353.0
-margin_bottom = 115.0
+margin_bottom = 102.0
 
 [node name="GameOverLabel" type="Label" parent="GameOverWinHUD/VBoxContainer"]
 margin_right = 353.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 25 )
+custom_fonts/font = SubResource( 27 )
 custom_colors/font_color = Color( 0.027451, 0.858824, 0, 1 )
 text = "YOU WIN"
 align = 1
@@ -1147,14 +1147,14 @@ alignment = 1
 margin_left = 33.0
 margin_right = 162.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 30 )
 text = "Credits"
 
 [node name="MainMenuButton" type="Button" parent="GameOverWinHUD/VBoxContainer/HBoxContainer"]
 margin_left = 166.0
 margin_right = 320.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 27 )
+custom_fonts/font = SubResource( 29 )
 text = "Main Menu"
 
 [node name="PausePopup" type="Popup" parent="."]
@@ -1179,7 +1179,7 @@ __meta__ = {
 [node name="PauseLabel" type="Label" parent="PausePopup/VBoxContainer"]
 margin_right = 437.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 28 )
+custom_fonts/font = SubResource( 31 )
 text = "Game Paused"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1198,7 +1198,7 @@ __meta__ = {
 margin_left = 82.0
 margin_right = 196.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 32 )
 text = "RESUME"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1208,7 +1208,7 @@ __meta__ = {
 margin_left = 200.0
 margin_right = 354.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 27 )
+custom_fonts/font = SubResource( 29 )
 text = "Main Menu"
 
 [node name="InstructionsPopup" type="Popup" parent="."]
@@ -1226,8 +1226,8 @@ margin_left = -175.154
 margin_top = 26.9389
 margin_right = 262.846
 margin_bottom = 173.939
-custom_styles/normal = SubResource( 30 )
-custom_fonts/font = SubResource( 31 )
+custom_styles/normal = SubResource( 33 )
+custom_fonts/font = SubResource( 34 )
 text = "Great work again!
 Advanced movement is a go. Moving on to
 simple attacking: melee!

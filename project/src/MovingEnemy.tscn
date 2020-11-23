@@ -38,7 +38,7 @@ animations = [ {
 radius = 19.2707
 height = 49.228
 
-[node name="Enemy" type="KinematicBody2D"]
+[node name="MovingEnemy" type="KinematicBody2D"]
 script = ExtResource( 20 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

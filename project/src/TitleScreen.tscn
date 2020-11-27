@@ -172,11 +172,13 @@ custom_fonts/font = SubResource( 7 )
 text = "How to play!
 Keyboard:
 - WASD or arrow keys to move and jump
+- Space to melee
 - Tab to pause game, space to unpause
 
 Controller:
 - Left stick to move left or right
 - Cross/A/B to jump!
+- Square/X/Y to melee
 - Options/Start/+ to pause
 - Circle/B/A to unpause"
 align = 1

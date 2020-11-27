@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://src/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/Tiles/BGTile (1).png" type="Texture" id=2]
@@ -79,6 +79,10 @@ font_data = ExtResource( 7 )
 size = 20
 font_data = ExtResource( 7 )
 
+[sub_resource type="DynamicFont" id=8]
+size = 20
+font_data = ExtResource( 7 )
+
 [sub_resource type="DynamicFont" id=5]
 size = 20
 font_data = ExtResource( 7 )
@@ -87,6 +91,14 @@ font_data = ExtResource( 7 )
 bg_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
 
 [sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 22
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 15
 font_data = ExtResource( 7 )
 
 [node name="TitleScreen" type="Node2D"]
@@ -117,10 +129,10 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 432.871
-margin_top = 410.276
-margin_right = 590.871
-margin_bottom = 486.276
+margin_left = 343.102
+margin_top = 414.952
+margin_right = 681.102
+margin_bottom = 540.952
 size_flags_horizontal = 5
 alignment = 1
 __meta__ = {
@@ -128,8 +140,8 @@ __meta__ = {
 }
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
-margin_left = 27.0
-margin_right = 185.0
+margin_left = 90.0
+margin_right = 248.0
 margin_bottom = 52.0
 hint_tooltip = "Start the game!"
 size_flags_horizontal = 4
@@ -140,17 +152,30 @@ __meta__ = {
 }
 
 [node name="InstructionsButton" type="Button" parent="VBoxContainer"]
+margin_left = 63.0
 margin_top = 56.0
-margin_right = 212.0
+margin_right = 275.0
 margin_bottom = 89.0
+size_flags_horizontal = 4
 custom_fonts/font = SubResource( 4 )
 text = "Instructions"
 
-[node name="CreditsButton" type="Button" parent="VBoxContainer"]
-margin_left = 41.0
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 93.0
-margin_right = 170.0
+margin_right = 338.0
 margin_bottom = 126.0
+
+[node name="LevelSelectButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_right = 205.0
+margin_bottom = 33.0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 8 )
+text = "Level Select"
+
+[node name="CreditsButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 209.0
+margin_right = 338.0
+margin_bottom = 33.0
 size_flags_horizontal = 4
 custom_fonts/font = SubResource( 5 )
 text = "Credits"
@@ -187,10 +212,91 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="LevelSelectPopup" type="Popup" parent="."]
+margin_left = 407.96
+margin_top = 311.408
+margin_right = 615.96
+margin_bottom = 467.408
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelSelectBackground" type="ColorRect" parent="LevelSelectPopup"]
+margin_left = -5.0
+margin_top = 4.0
+margin_right = 211.0
+margin_bottom = 157.0
+color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LevelSelectPopup"]
+margin_right = 40.0
+margin_bottom = 40.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelSelectLabel" type="Label" parent="LevelSelectPopup/VBoxContainer"]
+margin_right = 206.0
+margin_bottom = 29.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+custom_fonts/font = SubResource( 9 )
+text = "Level Select"
+align = 1
+
+[node name="Level1Button" type="Button" parent="LevelSelectPopup/VBoxContainer"]
+margin_top = 33.0
+margin_right = 206.0
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 10 )
+text = "Level 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2Button" type="Button" parent="LevelSelectPopup/VBoxContainer"]
+margin_top = 64.0
+margin_right = 206.0
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 10 )
+text = "Level 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level3Button" type="Button" parent="LevelSelectPopup/VBoxContainer"]
+margin_top = 95.0
+margin_right = 206.0
+margin_bottom = 122.0
+custom_fonts/font = SubResource( 10 )
+text = "Level 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level4Button" type="Button" parent="LevelSelectPopup/VBoxContainer"]
+margin_top = 126.0
+margin_right = 206.0
+margin_bottom = 153.0
+custom_fonts/font = SubResource( 10 )
+text = "Level 4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="IntroPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 volume_db = -10.0
 autoplay = true
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/InstructionsButton" to="." method="_on_InstructionsButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/LevelSelectButton" to="." method="_on_LevelSelectButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="LevelSelectPopup/VBoxContainer/Level1Button" to="." method="_on_Level1Button_pressed"]
+[connection signal="pressed" from="LevelSelectPopup/VBoxContainer/Level2Button" to="." method="_on_Level2Button_pressed"]
+[connection signal="pressed" from="LevelSelectPopup/VBoxContainer/Level3Button" to="." method="_on_Level3Button_pressed"]
+[connection signal="pressed" from="LevelSelectPopup/VBoxContainer/Level4Button" to="." method="_on_Level4Button_pressed"]

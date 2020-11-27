@@ -977,16 +977,12 @@ extents = Vector2( 31.6658, 34.3632 )
 size = 30
 font_data = ExtResource( 16 )
 
-[sub_resource type="DynamicFont" id=44]
+[sub_resource type="DynamicFont" id=36]
 size = 25
 font_data = ExtResource( 16 )
 
-[sub_resource type="DynamicFont" id=36]
-size = 50
-font_data = ExtResource( 16 )
-
 [sub_resource type="DynamicFont" id=37]
-size = 20
+size = 50
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=38]
@@ -998,17 +994,21 @@ size = 20
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=40]
-size = 50
-font_data = ExtResource( 16 )
-
-[sub_resource type="DynamicFont" id=41]
 size = 20
 font_data = ExtResource( 16 )
 
-[sub_resource type="StyleBoxFlat" id=42]
+[sub_resource type="DynamicFont" id=41]
+size = 50
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=42]
+size = 20
+font_data = ExtResource( 16 )
+
+[sub_resource type="StyleBoxFlat" id=43]
 bg_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
 
-[sub_resource type="DynamicFont" id=43]
+[sub_resource type="DynamicFont" id=44]
 font_data = ExtResource( 16 )
 
 [node name="Level-2" type="Node2D"]
@@ -1178,7 +1178,7 @@ margin_left = 651.764
 margin_top = 37.4577
 margin_right = 1006.76
 margin_bottom = 70.4577
-custom_fonts/font = SubResource( 44 )
+custom_fonts/font = SubResource( 36 )
 text = "Souls Collected: M"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1200,7 +1200,7 @@ margin_bottom = 102.0
 [node name="GameOverLabel" type="Label" parent="GameOverLoseHUD/VBoxContainer"]
 margin_right = 353.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 36 )
+custom_fonts/font = SubResource( 37 )
 custom_colors/font_color = Color( 0.858824, 0, 0, 1 )
 text = "GAME OVER"
 align = 1
@@ -1219,14 +1219,14 @@ alignment = 1
 margin_left = 21.0
 margin_right = 174.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 37 )
+custom_fonts/font = SubResource( 38 )
 text = "Try Again"
 
 [node name="MainMenuButton" type="Button" parent="GameOverLoseHUD/VBoxContainer/HBoxContainer"]
 margin_left = 178.0
 margin_right = 332.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 38 )
+custom_fonts/font = SubResource( 39 )
 text = "Main Menu"
 
 [node name="GameOverWinHUD" type="MarginContainer" parent="."]
@@ -1245,7 +1245,7 @@ margin_bottom = 102.0
 [node name="GameOverLabel" type="Label" parent="GameOverWinHUD/VBoxContainer"]
 margin_right = 353.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 36 )
+custom_fonts/font = SubResource( 37 )
 custom_colors/font_color = Color( 0.027451, 0.858824, 0, 1 )
 text = "YOU WIN"
 align = 1
@@ -1264,14 +1264,14 @@ alignment = 1
 margin_left = 12.0
 margin_right = 183.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 39 )
+custom_fonts/font = SubResource( 40 )
 text = "Next Level"
 
 [node name="MainMenuButton" type="Button" parent="GameOverWinHUD/VBoxContainer/HBoxContainer"]
 margin_left = 187.0
 margin_right = 341.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 38 )
+custom_fonts/font = SubResource( 39 )
 text = "Main Menu"
 
 [node name="PausePopup" type="Popup" parent="."]
@@ -1296,7 +1296,7 @@ __meta__ = {
 [node name="PauseLabel" type="Label" parent="PausePopup/VBoxContainer"]
 margin_right = 437.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 40 )
+custom_fonts/font = SubResource( 41 )
 text = "Game Paused"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1315,7 +1315,7 @@ __meta__ = {
 margin_left = 82.0
 margin_right = 196.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 41 )
+custom_fonts/font = SubResource( 42 )
 text = "RESUME"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1325,7 +1325,7 @@ __meta__ = {
 margin_left = 200.0
 margin_right = 354.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 38 )
+custom_fonts/font = SubResource( 39 )
 text = "Main Menu"
 
 [node name="InstructionsPopup" type="Popup" parent="."]
@@ -1342,8 +1342,8 @@ margin_left = -175.154
 margin_top = 26.9389
 margin_right = 262.846
 margin_bottom = 173.939
-custom_styles/normal = SubResource( 42 )
-custom_fonts/font = SubResource( 43 )
+custom_styles/normal = SubResource( 43 )
+custom_fonts/font = SubResource( 44 )
 text = "Good work recruit!
 Simple movement looks great. Now, to
 something a little more challenging: 

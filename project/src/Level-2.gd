@@ -43,6 +43,8 @@ func _process(_delta):
 		time_label.text = str(minutes) + ":0" + str(seconds)
 	else:
 		time_label.text = str(minutes) + ":" + str(seconds)
+	if seconds == 60:
+		seconds = 0
 	
 	soul_count_label.text = "Souls collected: " + str(soul_count)
 	

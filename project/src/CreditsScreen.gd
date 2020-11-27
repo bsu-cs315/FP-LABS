@@ -2,6 +2,8 @@ extends Node2D
 
 
 onready var music_player := $IntroPlayer
+onready var skip_label := $SkipLabel
+
 var credits_labels : Array
 
 var main_scene_path = "res://src/TitleScreen.tscn"
@@ -18,7 +20,8 @@ func _process(_delta):
 	for credit in credits_labels:
 		credit.rect_position.y -= 0.5
 	
-	
+	if Input.is_action_just_pressed("skip_credits"):
+		var _ignored = get_tree().change_scene(main_scene_path)
 
 
 func _on_RawpixelLink_pressed():

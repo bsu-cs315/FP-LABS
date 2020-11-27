@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/CreditsScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/Tiles/BGTile (1).png" type="Texture" id=2]
@@ -89,6 +89,10 @@ font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 20
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 10
 font_data = ExtResource( 7 )
 
 [node name="CreditsScreen" type="Node2D"]
@@ -272,6 +276,17 @@ custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
 text = "CC BY-NC 3.0"
 underline = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkipLabel" type="Label" parent="."]
+margin_left = 891.394
+margin_top = 554.365
+margin_right = 1017.39
+margin_bottom = 568.365
+custom_fonts/font = SubResource( 8 )
+text = "Hold esc to skip"
 __meta__ = {
 "_edit_use_anchors_": false
 }

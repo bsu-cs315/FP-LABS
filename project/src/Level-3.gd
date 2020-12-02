@@ -32,7 +32,7 @@ var seconds := 0
 var minutes := 0
 
 var main_scene_path := "res://src/TitleScreen.tscn"
-var credits_scene_path := "res://src/CreditsScreen.tscn"
+var level4_scene_path := "res://src/Level-4.tscn"
 
 
 func _ready():
@@ -125,6 +125,10 @@ func _on_MainMenuButton_pressed():
 	var _ignored = get_tree().change_scene(main_scene_path)
 
 
+func _on_NextLevelButton_pressed():
+	var _ignored = get_tree().change_scene(level4_scene_path)
+
+
 func _on_SecondsTimer_timeout():
 	seconds += 1
 
@@ -140,7 +144,3 @@ func _on_QueueFreeTimer_timeout():
 func _on_Unpause_pressed():
 	pause_popup.hide()
 	get_tree().paused = false
-
-
-func _on_CreditsButton_pressed():
-	var _ignored = get_tree().change_scene(credits_scene_path)

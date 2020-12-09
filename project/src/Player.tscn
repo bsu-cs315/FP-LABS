@@ -58,6 +58,11 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 40 ), ExtResource( 34 ), ExtResource( 30 ), ExtResource( 37 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 31 ) ],
+"loop": false,
+"name": "melee",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 39 ), ExtResource( 32 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 33 ), ExtResource( 44 ), ExtResource( 45 ) ],
 "loop": false,
 "name": "jumpMelee",
@@ -67,11 +72,6 @@ animations = [ {
 "loop": true,
 "name": "run",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 40 ), ExtResource( 34 ), ExtResource( 30 ), ExtResource( 37 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 31 ) ],
-"loop": false,
-"name": "melee",
-"speed": 10.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]

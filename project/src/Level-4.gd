@@ -36,7 +36,7 @@ var credits_scene_path := "res://src/CreditsScreen.tscn"
 
 
 func _ready():
-	player.enable_level_3()
+	player.enable_level_4()
 	instructions_popup.popup()
 	
 	for enemy in get_tree().get_nodes_in_group("enemies"):

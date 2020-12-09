@@ -18,10 +18,12 @@ var jump_count := 0
 var melee_enabled := false
 var prev_anim : String
 var current_melee_collision : CollisionShape2D = melee_collision_right
+var projectile_enabled := false
 
 onready var player_sprite = $AnimatedSprite
 onready var melee_collision_right = $MeleeAreaRight/MeleeAreaRightShape
 onready var melee_collision_left = $MeleeAreaLeft/MeleeAreaLeftShape
+onready var fireball_projectile = preload("res://src/Fireball.tscn")
 onready var player_cam = $PlayerCam
 onready var shake_timer = $ShakeTime
 onready var jump_player = $JumpSound
@@ -146,3 +148,7 @@ func enable_level_2():
 
 func enable_level_3():
 	melee_enabled = true
+
+
+func enable_level_4():
+	pass

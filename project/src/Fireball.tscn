@@ -24,7 +24,7 @@ height = 4.97426
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
 animation = "fireball"
-frame = 3
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

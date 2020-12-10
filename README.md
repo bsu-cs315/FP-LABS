@@ -59,6 +59,7 @@ I also worked a lot with layers and masks to put collectibles in the game, which
 - [ ] ⭐ Include an AI-controlled characters
 - [ ] ⭐ Include an AI-controlled character controlled with a different AI
 - [x] ⭐ Add a pause menu that includes, at minimum, the ability to resume or return to the main menu
+- [ ] ⭐ Follow the planning process introduced in Iteration 1 for both Iterations 2 and 3, and mention the impact of this in your personal reflection.
 - [ ] ⭐ The game is released publicly on <code>itch.io</code>, with all the recommended accompanying text, screenshots, gameplay videos, <i>etc.</i>
 
 

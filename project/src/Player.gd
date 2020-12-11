@@ -44,7 +44,7 @@ func _physics_process(delta):
 	_velocity.y += GRAVITY * delta
 	
 	if melee_enabled and Input.is_action_just_pressed("melee"):
-		attack_melee(player_sprite.animation)
+		attack_melee(player_sprite.animation  if player_sprite.animation != "melee" else "idle")
 	
 	if Input.is_action_pressed("move_right"):
 		player_sprite.flip_h = false
@@ -57,11 +57,12 @@ func _physics_process(delta):
 	else:
 		_velocity.x = 0
 	
-	if player_sprite.animation != "melee":
-		if is_on_floor():
-			player_sprite.animation = "run" if abs(_velocity.x) > 0 else "idle"
-		else:
-			player_sprite.animation = "idle" if _velocity.y > 0 else "jump"
+	if player_sprite.animation == "melee":
+		pass
+	elif is_on_floor():
+		player_sprite.animation = "run" if abs(_velocity.x) > 0 else "idle"
+	else:
+		player_sprite.animation = "idle" if _velocity.y > 0 else "jump"
 	if _velocity.x or _velocity.y != 0:
 		player_sprite.play()
 	else:

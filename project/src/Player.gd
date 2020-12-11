@@ -159,4 +159,4 @@ func enable_level_3():
 
 
 func enable_level_4():
-	pass
+	projectile_enabled = true

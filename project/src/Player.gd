@@ -63,6 +63,8 @@ func _physics_process(delta):
 	
 	if player_sprite.animation == "melee":
 		pass
+	elif player_sprite.animation == "projectile":
+		pass
 	elif is_on_floor():
 		player_sprite.animation = "run" if abs(_velocity.x) > 0 else "idle"
 	else:
@@ -98,6 +100,8 @@ func attack_projectile(current_anim):
 	prev_anim = current_anim
 	var fireball = fireball_projectile.instance()
 	fireball.position = fireball_position.global_position
+	player_sprite.animation = "projectile"
+	player_sprite.play()
 	get_parent().add_child(fireball)
 
 
@@ -106,6 +110,8 @@ func _on_AnimatedSprite_animation_finished():
 		player_sprite.animation = prev_anim
 		melee_collision_left.disabled = true
 		melee_collision_right.disabled = true
+	if player_sprite.animation == "projectile":
+		player_sprite.animation = prev_anim
 
 
 func explode_cogwheels():

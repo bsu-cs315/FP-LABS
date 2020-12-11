@@ -46,6 +46,9 @@ func _physics_process(delta):
 	if melee_enabled and Input.is_action_just_pressed("melee"):
 		attack_melee(player_sprite.animation  if player_sprite.animation != "melee" else "idle")
 	
+	if projectile_enabled and Input.is_action_just_pressed("projectile"):
+		attack_projectile(player_sprite.animation  if player_sprite.animation != "projectile" else "idle")
+	
 	if Input.is_action_pressed("move_right"):
 		player_sprite.flip_h = false
 		_velocity.x = run_speed
@@ -89,6 +92,10 @@ func attack_melee(current_anim):
 	current_melee_collision.disabled = false
 	player_sprite.animation = "melee"
 	player_sprite.play()
+
+func attack_projectile(current_anim):
+	prev_anim = current_anim
+	get_parent().add_child(fireball_projectile.instance())
 
 
 func _on_AnimatedSprite_animation_finished():

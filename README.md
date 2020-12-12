@@ -22,10 +22,11 @@ Continued from a previous project: [P2-SciFi-Platformer](https://github.com/bsu-
 ### Layers and Masks Documentation:
 I used layers and masks to add collectibles into my platformer. I created a collectible scene as an <code>Area2D</code> and a sprite for texture, then instanced a few of this scene in each level to give it collectibles. I put the collectibles in a second layer, then set only the player mask to detect collisions in that layer so that only the player would "collide" with the collectible Area2D and be able to pick it up.
 
-### Reflection:
-This iteration, my main goal was getting a melee attack set up, which was a lot of fun. I did not have a plan of how to do this from the start, so a lot of research and trial and error took place. It was a good experience in finding different ways to go about a feature. My main issues with the melee attack were with the animation choosing and playing. Trying to get the animation to play, but not overlap with others or get taken over by others was very difficult. I still have a bit of a polish issue with the animation sometimes getting stuck, but I hope to polish this in the final iteration.
+### Planning Process Reflection:
+I decided to continue using the same planning process as Iteration 1 for my other two iterations as well. Because I was working alone on this final project and not on a team, using GitHub to set up projects, issues, and milestones didn't make too much of an impact on my overall process throughout the project, but it was still helpful nonetheless. It was helpful for the times when I wanted to plan out specific work to focus on for the iteration, when I had to take a break for a day or two to work on other schoolwork, or even when I simply got stuck going down the rabbit hole of bug fixes/small, popup, somewhat random features and lost my main focus for the iteration. It was a very nice reference to go back to to make sure I got key, planned features finished no matter what else I decided to put into the current iteration.
 
-I also worked a lot with layers and masks to put collectibles in the game, which wasn't as bad as I thought it would be and was nice to be able to get that feature up and running fairly quickly.
+### Reflection:
+
 
 ### Self-Evaluation:
 - [x] D-1: The repository link is submitted to Canvas before the project deadline.
@@ -55,11 +56,11 @@ I also worked a lot with layers and masks to put collectibles in the game, which
 - [ ] ⭐ Incorporate another kind of juiciness and document it in the <code>README.md</code>
 - [x] ⭐ Use particle effects
 - [x] ⭐ Use different layers and masks to manage collisions and document this in the <code>README.md</code>
-- [ ] ⭐ Incorporate pop into your HUD or title screen using <code>Tween</code> or <code>AnimationPlayer</code>
+- [x] ⭐ Incorporate pop into your HUD or title screen using <code>Tween</code> or <code>AnimationPlayer</code>
 - [ ] ⭐ Include an AI-controlled characters
 - [ ] ⭐ Include an AI-controlled character controlled with a different AI
 - [x] ⭐ Add a pause menu that includes, at minimum, the ability to resume or return to the main menu
-- [ ] ⭐ Follow the planning process introduced in Iteration 1 for both Iterations 2 and 3, and mention the impact of this in your personal reflection.
+- [x] ⭐ Follow the planning process introduced in Iteration 1 for both Iterations 2 and 3, and mention the impact of this in your personal reflection.
 - [ ] ⭐ The game is released publicly on <code>itch.io</code>, with all the recommended accompanying text, screenshots, gameplay videos, <i>etc.</i>
 
 

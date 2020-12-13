@@ -34,7 +34,7 @@ var minutes := 0
 onready var secrets_tilemap := $Secrets
 
 var main_scene_path := "res://src/TitleScreen.tscn"
-var credits_scene_path := "res://src/CreditsScreen.tscn"
+var congrats_scene_path := "res://src/CongratsScreen.tscn"
 
 
 func _ready():
@@ -159,8 +159,8 @@ func _on_Unpause_pressed():
 	get_tree().paused = false
 
 
-func _on_CreditsButton_pressed():
-	var _ignored = get_tree().change_scene(credits_scene_path)
+func _on_ContinueButton_pressed():
+	var _ignored = get_tree().change_scene(congrats_scene_path)
 
 
 func _on_InstructionsPopup_popup_hide():

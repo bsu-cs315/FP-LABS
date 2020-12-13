@@ -1,17 +1,13 @@
-extends KinematicBody2D
+extends Area2D
 
 
-signal fireball_hit(body)
+signal enemy_hit_projectile(body)
 
 const FLY_SPEED := 200
 var _velocity := Vector2()
 var direction := 1
 
 onready var fireball_sprite = $AnimatedSprite
-
-
-func _ready():
-	pass
 
 
 func _physics_process(delta):
@@ -31,4 +27,6 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 
 func _on_Fireball_body_entered(body):
-	 emit_signal("fireball_hit", body)
+	if body.is_in_group("enemies"):
+		emit_signal("enemy_hit_projectile", body)
+	queue_free()

@@ -108,6 +108,7 @@ func attack_projectile(current_anim):
 	player_sprite.play()
 	get_parent().add_child(fireball)
 	fireball.set_fireball_direction(sign(fireball_position.position.x))
+	fireball.connect("enemy_hit_projectile", self, "on_enemy_hit_projectile")
 
 
 func _on_AnimatedSprite_animation_finished():
@@ -154,6 +155,10 @@ func _on_PlayerArea_area_shape_entered(_area_id, area, _area_shape, _self_shape)
 func _on_melee_collision_entered(_body_id, body, _body_shape, _area_shape):
 	if body.is_in_group("enemies"):
 		emit_signal("enemy_hit", body)
+
+
+func on_enemy_hit_projectile(body):
+	emit_signal("enemy_hit", body)
 
 
 func _on_ShakeTime_timeout():

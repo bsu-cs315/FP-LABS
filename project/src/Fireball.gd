@@ -3,7 +3,7 @@ extends Area2D
 
 signal enemy_hit_projectile(body)
 
-const FLY_SPEED := 200
+const FLY_SPEED := 300
 var _velocity := Vector2()
 var direction := 1
 

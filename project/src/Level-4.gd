@@ -134,7 +134,7 @@ func _on_MinutesTimer_timeout():
 
 
 func _on_QueueFreeTimer_timeout():
-	remove_child(player)
+	player.queue_free()
 
 
 func _on_Unpause_pressed():

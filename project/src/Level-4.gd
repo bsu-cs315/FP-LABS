@@ -55,8 +55,7 @@ func _process(_delta):
 	soul_count_label.text = "Souls collected: " + str(soul_count)
 	
 	if enemy_count <= 0:
-#		win_player()
-		pass
+		win_player()
 	
 	if Input.is_action_just_pressed("pause_game"):
 		get_tree().paused = true

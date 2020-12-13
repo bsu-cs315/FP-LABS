@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
 
+signal fireball_hit(body)
+
 const FLY_SPEED := 200
 var _velocity := Vector2()
 var direction := 1
@@ -26,3 +28,7 @@ func set_fireball_direction(pass_dir):
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
+
+
+func _on_Fireball_body_entered(body):
+	 emit_signal("fireball_hit", body)

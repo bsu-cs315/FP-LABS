@@ -161,3 +161,8 @@ func _on_Unpause_pressed():
 
 func _on_CreditsButton_pressed():
 	var _ignored = get_tree().change_scene(credits_scene_path)
+
+
+func _on_InstructionsPopup_popup_hide():
+	seconds_timer.start()
+	minutes_timer.start()

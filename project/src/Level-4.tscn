@@ -1286,11 +1286,9 @@ custom_fonts/font = SubResource( 24 )
 text = "x:xx"
 
 [node name="SecondsTimer" type="Timer" parent="InfoHUDLayer/TimeHUD"]
-autostart = true
 
 [node name="MinutesTimer" type="Timer" parent="InfoHUDLayer/TimeHUD"]
 wait_time = 60.0
-autostart = true
 
 [node name="EnemyCountLabel" type="Label" parent="InfoHUDLayer"]
 margin_left = 705.963
@@ -1508,3 +1506,4 @@ stream = ExtResource( 12 )
 [connection signal="pressed" from="GameOverWinHUD/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 [connection signal="pressed" from="PausePopup/VBoxContainer/HBoxContainer/Unpause" to="." method="_on_Unpause_pressed"]
 [connection signal="pressed" from="PausePopup/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
+[connection signal="popup_hide" from="InstructionsPopup" to="." method="_on_InstructionsPopup_popup_hide"]

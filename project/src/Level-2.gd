@@ -131,3 +131,8 @@ func _on_QueueFreeTimer_timeout():
 func _on_Unpause_pressed():
 	pause_popup.hide()
 	get_tree().paused = false
+
+
+func _on_InstructionsPopup_popup_hide():
+	seconds_timer.start()
+	minutes_timer.start()

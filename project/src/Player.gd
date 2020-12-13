@@ -103,11 +103,11 @@ func attack_melee(current_anim):
 func attack_projectile(current_anim):
 	prev_anim = current_anim
 	var fireball = fireball_projectile.instance()
-	fireball.set_fireball_direction(sign(fireball_position.position.x))
 	fireball.position = fireball_position.global_position
 	player_sprite.animation = "projectile"
 	player_sprite.play()
 	get_parent().add_child(fireball)
+	fireball.set_fireball_direction(sign(fireball_position.position.x))
 
 
 func _on_AnimatedSprite_animation_finished():

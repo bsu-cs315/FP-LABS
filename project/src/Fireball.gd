@@ -21,7 +21,7 @@ func _physics_process(delta):
 func set_fireball_direction(pass_dir):
 	direction = pass_dir
 	if pass_dir == -1:
-		$AnimatedSprite.flip_h = true
+		fireball_sprite.flip_h = true
 
 
 func _on_VisibilityNotifier2D_screen_exited():

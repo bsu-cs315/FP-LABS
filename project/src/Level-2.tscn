@@ -1167,11 +1167,9 @@ custom_fonts/font = SubResource( 35 )
 text = "x:xx"
 
 [node name="SecondsTimer" type="Timer" parent="InfoHUDLayer/TimeHUD"]
-autostart = true
 
 [node name="MinutesTimer" type="Timer" parent="InfoHUDLayer/TimeHUD"]
 wait_time = 60.0
-autostart = true
 
 [node name="SoulCountLabel" type="Label" parent="InfoHUDLayer"]
 margin_left = 651.764

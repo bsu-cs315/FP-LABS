@@ -1138,32 +1138,106 @@ position = Vector2( 2309.41, 147.078 )
 position = Vector2( 3155.5, 466.146 )
 
 [node name="SoulGroup" type="Node2D" parent="."]
-visible = false
 
 [node name="SoulCollectible" parent="SoulGroup" groups=[
 "collectibles",
 ] instance=ExtResource( 36 )]
-position = Vector2( 372.222, 447.142 )
+position = Vector2( 532.232, 492.499 )
 
 [node name="SoulCollectible2" parent="SoulGroup" groups=[
 "collectibles",
 ] instance=ExtResource( 36 )]
-position = Vector2( 897.851, 298.491 )
+position = Vector2( 1119.6, 444.642 )
 
 [node name="SoulCollectible3" parent="SoulGroup" groups=[
 "collectibles",
 ] instance=ExtResource( 36 )]
-position = Vector2( 225.949, 124.867 )
+position = Vector2( 146.574, 141.246 )
 
 [node name="SoulCollectible4" parent="SoulGroup" groups=[
 "collectibles",
 ] instance=ExtResource( 36 )]
-position = Vector2( 2787.5, 325.843 )
+position = Vector2( 609.096, 197.331 )
 
 [node name="SoulCollectible5" parent="SoulGroup" groups=[
 "collectibles",
 ] instance=ExtResource( 36 )]
-position = Vector2( 2226.2, 99.8934 )
+position = Vector2( 2492.04, 87.2942 )
+
+[node name="SoulCollectible6" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 3207.68, 40.6772 )
+
+[node name="SoulCollectible7" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 3229.1, 456.451 )
+
+[node name="SoulCollectible8" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 2788.13, 358.177 )
+
+[node name="SoulCollectible9" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 2527.32, 850.806 )
+
+[node name="SoulCollectible10" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 2528.58, 906.243 )
+
+[node name="SoulCollectible11" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 2615.52, 848.286 )
+
+[node name="SoulCollectible12" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 2615.52, 902.463 )
+
+[node name="SoulCollectible13" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 2704.97, 848.286 )
+
+[node name="SoulCollectible14" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 2698.67, 903.723 )
+
+[node name="SoulCollectible15" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 2785.61, 853.326 )
+
+[node name="SoulCollectible16" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 2783.09, 904.983 )
+
+[node name="SoulCollectible17" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 2864.98, 852.066 )
+
+[node name="SoulCollectible18" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 2859.94, 903.723 )
+
+[node name="SoulCollectible19" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 2940.58, 854.586 )
+
+[node name="SoulCollectible20" parent="SoulGroup" groups=[
+"collectibles",
+] instance=ExtResource( 36 )]
+position = Vector2( 2938.06, 904.983 )
 
 [node name="Player" parent="." instance=ExtResource( 17 )]
 position = Vector2( 80.7981, 523.927 )

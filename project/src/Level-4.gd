@@ -128,9 +128,10 @@ func _on_SecretsArea2D_body_entered(body):
 
 
 func _on_SecretsArea2D_body_exited(body):
-	secrets_tilemap.visible = true
-	player_cam.limit_bottom = 1
-	player_cam.drag_margin_v_enabled = false
+	if body == player:
+		secrets_tilemap.visible = true
+		player_cam.limit_bottom = 1
+		player_cam.drag_margin_v_enabled = false
 
 
 func _on_RetryButton_pressed():

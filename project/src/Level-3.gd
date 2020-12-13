@@ -77,7 +77,7 @@ func kill_player():
 
 
 func kill_enemy(body):
-	remove_child(body)
+	body.queue_free()
 	enemy_count -= 1
 	
 
@@ -109,7 +109,7 @@ func _on_Player_player_hit(body):
 
 func _on_Player_player_area_hit(area):
 	if area.is_in_group("collectibles"):
-		soul_group.remove_child(area)
+		area.queue_free()
 		soul_count += 1
 
 
@@ -138,7 +138,7 @@ func _on_MinutesTimer_timeout():
 
 
 func _on_QueueFreeTimer_timeout():
-	remove_child(player)
+	player.queue_free()
 
 
 func _on_Unpause_pressed():

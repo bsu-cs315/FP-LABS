@@ -31,6 +31,8 @@ onready var minutes_timer := $InfoHUDLayer/TimeHUD/MinutesTimer
 var seconds := 0
 var minutes := 0
 
+onready var secrets_tilemap := $Secrets
+
 var main_scene_path := "res://src/TitleScreen.tscn"
 var credits_scene_path := "res://src/CreditsScreen.tscn"
 
@@ -115,6 +117,15 @@ func _on_Player_player_area_hit(area):
 
 func _on_Player_enemy_hit(body):
 	kill_enemy(body)
+
+
+func _on_SecretsArea2D_body_entered(body):
+	if body == player:
+		secrets_tilemap.visible = false
+
+
+func _on_SecretsArea2D_body_exited(body):
+	secrets_tilemap.visible = true
 
 
 func _on_RetryButton_pressed():

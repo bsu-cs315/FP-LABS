@@ -5,7 +5,7 @@ const FLY_SPEED := 200
 var _velocity := Vector2()
 var direction := 1
 
-onready var fireball_sprite := $AnimatedSprite
+onready var fireball_sprite = $AnimatedSprite
 
 
 func _ready():
@@ -16,7 +16,6 @@ func _physics_process(delta):
 	_velocity.x = FLY_SPEED * direction * delta
 	
 	translate(_velocity)
-	fireball_sprite.play("fireball")
 
 
 func set_fireball_direction(pass_dir):

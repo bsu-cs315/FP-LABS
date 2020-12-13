@@ -71,24 +71,23 @@
 size = 55
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=3]
 size = 35
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
 font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 20
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=7]
-size = 20
-font_data = ExtResource( 7 )
-
-[sub_resource type="DynamicFont" id=8]
-size = 20
-font_data = ExtResource( 7 )
-
-[sub_resource type="Animation" id=3]
-resource_name = "IntroAnim"
+[sub_resource type="Animation" id=7]
 length = 2.75
 tracks/0/type = "value"
 tracks/0/path = NodePath("LABSSection:rect_position")
@@ -163,17 +162,17 @@ tracks/5/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="StyleBoxFlat" id=9]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=9]
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=10]
 size = 22
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=11]
 size = 15
 font_data = ExtResource( 7 )
 
@@ -244,7 +243,7 @@ margin_right = 248.0
 margin_bottom = 52.0
 hint_tooltip = "Start the game!"
 size_flags_horizontal = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 3 )
 text = "BEGIN"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -256,7 +255,7 @@ margin_top = 56.0
 margin_right = 275.0
 margin_bottom = 89.0
 size_flags_horizontal = 4
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
 text = "Instructions"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TitleScreenControls"]
@@ -268,7 +267,7 @@ margin_bottom = 126.0
 margin_right = 205.0
 margin_bottom = 33.0
 size_flags_horizontal = 4
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 5 )
 text = "Level Select"
 
 [node name="CreditsButton" type="Button" parent="TitleScreenControls/HBoxContainer"]
@@ -276,12 +275,12 @@ margin_left = 209.0
 margin_right = 338.0
 margin_bottom = 33.0
 size_flags_horizontal = 4
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 6 )
 text = "Credits"
 
 [node name="IntroAnim" type="AnimationPlayer" parent="."]
 autoplay = "IntroAnim"
-anims/IntroAnim = SubResource( 3 )
+anims/IntroAnim = SubResource( 7 )
 
 [node name="InstructionsPopup" type="Popup" parent="."]
 margin_left = 317.0
@@ -295,8 +294,8 @@ __meta__ = {
 [node name="Instructions" type="Label" parent="InstructionsPopup"]
 margin_right = 431.0
 margin_bottom = 254.0
-custom_styles/normal = SubResource( 9 )
-custom_fonts/font = SubResource( 10 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
 text = "How to play!
 Keyboard:
 - WASD or arrow keys to move and jump
@@ -347,7 +346,7 @@ margin_right = 206.0
 margin_bottom = 29.0
 size_flags_horizontal = 4
 size_flags_vertical = 8
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 10 )
 text = "Level Select"
 align = 1
 
@@ -355,7 +354,7 @@ align = 1
 margin_top = 33.0
 margin_right = 206.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 11 )
 text = "Level 1"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -365,7 +364,7 @@ __meta__ = {
 margin_top = 64.0
 margin_right = 206.0
 margin_bottom = 91.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 11 )
 text = "Level 2"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -375,7 +374,7 @@ __meta__ = {
 margin_top = 95.0
 margin_right = 206.0
 margin_bottom = 122.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 11 )
 text = "Level 3"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -385,7 +384,7 @@ __meta__ = {
 margin_top = 126.0
 margin_right = 206.0
 margin_bottom = 153.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 11 )
 text = "Level 4"
 __meta__ = {
 "_edit_use_anchors_": false

@@ -60,7 +60,7 @@ func _physics_process(delta):
 		player_sprite.flip_h = true
 		_velocity.x = -run_speed
 		current_melee_collision = melee_collision_left
-		if sign(fireball_position.position.x) == -1:
+		if sign(fireball_position.position.x) == 1:
 			fireball_position.position.x *= -1
 	else:
 		_velocity.x = 0
@@ -104,6 +104,7 @@ func attack_projectile(current_anim):
 	prev_anim = current_anim
 	var fireball = fireball_projectile.instance()
 	fireball.position = fireball_position.global_position
+	fireball.set_fireball_direction(sign(fireball_position.position.x))
 	player_sprite.animation = "projectile"
 	player_sprite.play()
 	get_parent().add_child(fireball)

@@ -54,10 +54,14 @@ func _physics_process(delta):
 		player_sprite.flip_h = false
 		_velocity.x = run_speed
 		current_melee_collision = melee_collision_right
+		if sign(fireball_position.position.x) == -1:
+			fireball_position.position.x *= -1
 	elif Input.is_action_pressed("move_left"):
 		player_sprite.flip_h = true
 		_velocity.x = -run_speed
 		current_melee_collision = melee_collision_left
+		if sign(fireball_position.position.x) == -1:
+			fireball_position.position.x *= -1
 	else:
 		_velocity.x = 0
 	

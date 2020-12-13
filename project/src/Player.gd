@@ -20,16 +20,16 @@ var prev_anim : String
 var current_melee_collision : CollisionShape2D = melee_collision_right
 var projectile_enabled := false
 
-onready var player_sprite = $AnimatedSprite
-onready var melee_collision_right = $MeleeAreaRight/MeleeAreaRightShape
-onready var melee_collision_left = $MeleeAreaLeft/MeleeAreaLeftShape
-onready var fireball_projectile = preload("res://src/Fireball.tscn")
-onready var fireball_position = $FireballPosition
-onready var fireball_player = $FireballSound
-onready var player_cam = $PlayerCam
-onready var shake_timer = $ShakeTime
-onready var jump_player = $JumpSound
-onready var cogwheels = $Cogwheels
+onready var player_sprite := $AnimatedSprite
+onready var melee_collision_right := $MeleeAreaRight/MeleeAreaRightShape
+onready var melee_collision_left := $MeleeAreaLeft/MeleeAreaLeftShape
+onready var fireball_projectile := preload("res://src/Fireball.tscn")
+onready var fireball_position := $FireballPosition
+onready var fireball_player := $FireballSound
+onready var player_cam := $PlayerCam
+onready var shake_timer := $ShakeTime
+onready var jump_player := $JumpSound
+onready var cogwheels := $Cogwheels
 
 
 func _ready():

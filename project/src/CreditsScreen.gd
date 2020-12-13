@@ -1,9 +1,6 @@
 extends Node2D
 
 
-onready var music_player := $IntroPlayer
-onready var skip_label := $SkipLabel
-
 var credits_labels : Array
 
 var main_scene_path = "res://src/TitleScreen.tscn"

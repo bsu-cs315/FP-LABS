@@ -6,12 +6,14 @@ Continued from a previous project: [P2-SciFi-Platformer](https://github.com/bsu-
 #### Keyboard:
 - Left/Right or A/D to move player left or right
 - Up or W to jump
-- Space to attack
+- Space to melee
+- Space to fire projectile
 - Tab to pause game, space to unpause
 #### Controller:
 - Left stick to move left or right
 - Cross/A/B to jump
-- Square/X/Y to attack
+- Square/X/Y to melee
+- R2 to fire projectile
 - Options/Start/+ to pause
 - Circle/B/A to unpause
 

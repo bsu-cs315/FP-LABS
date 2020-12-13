@@ -300,12 +300,14 @@ text = "How to play!
 Keyboard:
 - WASD or arrow keys to move and jump
 - Space to melee
+- Space to fire projectile
 - Tab to pause game, space to unpause
 
 Controller:
 - Left stick to move left or right
 - Cross/A/B to jump!
 - Square/X/Y to melee
+- R2 to fire projectile
 - Options/Start/+ to pause
 - Circle/B/A to unpause"
 align = 1

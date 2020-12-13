@@ -89,6 +89,8 @@ Sounds:
 
 `8bit Jump` licensed under [Creative Common Zero (CCO)](https://creativecommons.org/publicdomain/zero/1.0/). Source: https://freesound.org/people/plasterbrain/sounds/399095/
 
+`Fireball Explosion` licensed under [Creative Common Zero (CCO)](https://creativecommons.org/publicdomain/zero/1.0/). Source: https://freesound.org/people/HighPixel/sounds/431174/
+
 <br>
 Fonts:
 

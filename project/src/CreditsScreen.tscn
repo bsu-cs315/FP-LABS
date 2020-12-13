@@ -173,6 +173,7 @@ Sounds
 
 
 
+
 Fonts"
 align = 1
 __meta__ = {
@@ -207,6 +208,8 @@ text = "\"The Robot\" sprite set - gameart2d.com
 
 \"8bit Jump\" - plasterbrain
 
+\"Fireball Explosion\" - HighPixel
+
 
 \"Fino\" - dafont.com
 
@@ -217,16 +220,16 @@ __meta__ = {
 }
 
 [node name="CreditsVisibility" type="VisibilityNotifier2D" parent="ThirdPartyAssets"]
-position = Vector2( 515.421, 730.714 )
+position = Vector2( 515.421, 795.714 )
 scale = Vector2( 18.0089, 1 )
 
 [node name="RawpixelLink" type="LinkButton" parent="." groups=[
 "credits",
 ]]
-margin_left = 562.577
-margin_top = 705.856
-margin_right = 804.577
-margin_bottom = 732.856
+margin_left = 561.577
+margin_top = 706.856
+margin_right = 803.577
+margin_bottom = 733.856
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
 text = "rawpixel.com"
@@ -238,10 +241,10 @@ __meta__ = {
 [node name="ChiptuneLink" type="LinkButton" parent="." groups=[
 "credits",
 ]]
-margin_left = 196.74
-margin_top = 856.291
-margin_right = 438.74
-margin_bottom = 883.291
+margin_left = 195.74
+margin_top = 857.291
+margin_right = 437.74
+margin_bottom = 884.291
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
 text = "\"Chiptune Intro\""
@@ -253,10 +256,10 @@ __meta__ = {
 [node name="Zagi2Link" type="LinkButton" parent="." groups=[
 "credits",
 ]]
-margin_left = 463.978
-margin_top = 856.231
-margin_right = 705.978
-margin_bottom = 883.231
+margin_left = 462.978
+margin_top = 857.231
+margin_right = 704.978
+margin_bottom = 884.231
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
 text = "zagi2"
@@ -268,10 +271,10 @@ __meta__ = {
 [node name="CCBYNCLink" type="LinkButton" parent="." groups=[
 "credits",
 ]]
-margin_left = 645.507
-margin_top = 855.983
-margin_right = 887.507
-margin_bottom = 882.983
+margin_left = 644.507
+margin_top = 856.983
+margin_right = 886.507
+margin_bottom = 883.983
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.0392157, 0.188235, 0.756863, 1 )
 text = "CC BY-NC 3.0"

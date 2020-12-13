@@ -25,6 +25,7 @@ onready var melee_collision_right = $MeleeAreaRight/MeleeAreaRightShape
 onready var melee_collision_left = $MeleeAreaLeft/MeleeAreaLeftShape
 onready var fireball_projectile = preload("res://src/Fireball.tscn")
 onready var fireball_position = $FireballPosition
+onready var fireball_player = $FireballSound
 onready var player_cam = $PlayerCam
 onready var shake_timer = $ShakeTime
 onready var jump_player = $JumpSound
@@ -106,6 +107,7 @@ func attack_projectile(current_anim):
 	fireball.position = fireball_position.global_position
 	player_sprite.animation = "projectile"
 	player_sprite.play()
+	fireball_player.play()
 	get_parent().add_child(fireball)
 	fireball.set_fireball_direction(sign(fireball_position.position.x))
 	fireball.connect("enemy_hit_projectile", self, "on_enemy_hit_projectile")

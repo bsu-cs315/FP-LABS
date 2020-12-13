@@ -122,10 +122,15 @@ func _on_Player_enemy_hit(body):
 func _on_SecretsArea2D_body_entered(body):
 	if body == player:
 		secrets_tilemap.visible = false
+		player_cam.limit_bottom = 1050
+		player_cam.drag_margin_top = 0.5
+		player_cam.drag_margin_v_enabled = true
 
 
 func _on_SecretsArea2D_body_exited(body):
 	secrets_tilemap.visible = true
+	player_cam.limit_bottom = 1
+	player_cam.drag_margin_v_enabled = false
 
 
 func _on_RetryButton_pressed():

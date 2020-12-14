@@ -28,7 +28,9 @@ I used layers and masks to add collectibles into my platformer. I created a coll
 I decided to continue using the same planning process as Iteration 1 for my other two iterations as well. Because I was working alone on this final project and not on a team, using GitHub to set up projects, issues, and milestones didn't make too much of an impact on my overall process throughout the project, but it was still helpful nonetheless. It was helpful for the times when I wanted to plan out specific work to focus on for the iteration, when I had to take a break for a day or two to work on other schoolwork, or even when I simply got stuck going down the rabbit hole of bug fixes/small, popup, somewhat random features and lost my main focus for the iteration. It was a very nice reference to go back to to make sure I got key, planned features finished no matter what else I decided to put into the current iteration.
 
 ### Reflection:
+This last iteration was definitely full of progress but also was a lot of fun to work on. Making the projectile was fairly easy. It still came with a few bugs along the way but none that weren't quick and easy fixes. I really enjoyed building out this final level with some space to fire projectiles, as well as including a new simple enemy type to give variety, and also have some fun with another secret area.
 
+This iteration was also great because I got to fix a couple small issues I had personally with my older levels, but especially one from level 3 that I had been thinking about for a few weeks and finally had a new idea. It was great to feel like this small game is finally finished with what I wanted to do for this project and I am very excited to keep working on it outside of this class and building it bigger and better.
 
 ### Self-Evaluation:
 - [x] D-1: The repository link is submitted to Canvas before the project deadline.
